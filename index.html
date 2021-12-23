@@ -1,59 +1,73 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Помощь в онлайн-играх от PROBOOSTEAM</title>
     <!--стили текста-->
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <!--подключил файлы-->
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
 
     <header class="header">
-        <div class="logo">
-            <a href="./img/logo.jpg" class="logo__icon"></a>
-            <div class="logo__text">PROBOOSTEAM</div>
-        </div>
-        
-        <nav class="navigation">
-            <ul class="menu__list">
-                <li class="menu__item1">
-                    <a href="#" class="menu__link">Магазин</a>
-                </li>
-                <li class="menu__item2">
-                    <a href="#" class="menu__link">О нас</a>
-                </li>
-                <li class="menu__item3">
-                    <a href="#" class="menu__link">Отзывы</a>
-                </li>
-                <li class="menu__item4">
-                    <a href="#" class="menu__link">Контакты</a>
-                </li>
-                <li class="menu__item5">
-                    <a href="#" class="menu__link">Гарантии</a>    
-                </li>
-                <li class="menu__item6">
-                    <a href="#" class="menu__link">Как купить</a>
-                </li>
-            </ul>
-        </nav>
 
-        <a href="#" class="cart">
-            <div class="cart__circle"></div>
-            <img src="./img/cart-icon.svg" alt="" class="cart__icon">
-            <div class="cart__text">Корзина</div>
-        </a>
+        <container class="wrap">
+            <div class="logo">
+                <img src="/img/logo.png" alt="" class="logo__icon">
+                <div class="logo__text">PROBOOSTEAM</div>
+            </div>
 
-        <a href="#" class="language__menu">
-            <img src="./img/ru.jpg" alt="" class="language__menu_img-ru">
-        </a>
+            <nav class="navigation">
+                <ul class="menu__list">
+                    <li class="menu__item1 menu__item">
+                        <a href="#" class="menu__link1 menu__link">Магазин</a>
+                    </li>
+                    <li class="menu__item2 menu__item">
+                        <a href="#" class="menu__link2 menu__link">О нас</a>
+                    </li>
+                    <li class="menu__item3 menu__item">
+                        <a href="#" class="menu__link3 menu__link">Отзывы</a>
+                    </li>
+                    <li class="menu__item4 menu__item">
+                        <a href="#" class="menu__link4 menu__link">Контакты</a>
+                    </li>
+                    <li class="menu__item5 menu__item">
+                        <a href="#" class="menu__link5 menu__link">Гарантии</a>
+                    </li>
+                    <li class="menu__item6 menu__item">
+                        <a href="#" class="menu__link6 menu__link">Как купить</a>
+                    </li>
+                </ul>
+            </nav>
 
-        <div class="cabinet__menu">Личный кабинет</div>
+            <a href="#" class="cart">
+                <div class="cart__circle">
+                    <div class="cart__circle-text">1</div>
+                </div>
+                <img src="/img/cart-icon.svg" alt="" class="cart__icon">
+                <div class="cart__text">Корзина</div>
+            </a>
+
+            <a href="#" class="language">
+                <img src="/img/ru.jpg" alt="" class="language__menu_img-ru">
+                <div class="language__text">Язык</div>
+            </a>
+
+            <div class="cabinet">
+                <div class="cabinet__text">Личный кабинет</div>
+                <div class="cabinet__triangl"></div>
+            </div>
+        </container>
+
+        <!-- палочка -->
+        <hr class="header__line">
 
     </header>
 
@@ -61,4 +75,5 @@
 
 
 </body>
+
 </html>
