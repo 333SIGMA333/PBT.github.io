@@ -421,6 +421,18 @@ template {
     display: none;
 }
 
+ul{
+    padding-left: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+hr{
+    margin: 0;
+    opacity: 10%;
+    border: none;
+    background-color: #000;
+}
 
 
 
@@ -439,6 +451,7 @@ template {
 
 
 
+/* НАВИГАЦИЯ */
 
 .wrap{
     display: flex;
@@ -470,9 +483,6 @@ template {
 .menu__list{
     display: flex;
     justify-content: space-between; 
-    margin: 0;
-    padding-left: 0;
-    list-style-type: none;
 }
 
 .menu__link1{
@@ -579,9 +589,130 @@ template {
     margin-left: 32px;
     margin-right: 32px;
     margin-bottom: 0px;
-    opacity: 10%;
     max-width: 1375px;
     height: 1px;
-    background-color: #000;
-    border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Навигация магазина */
+
+.shop__navigation{
+    max-width: 785px;
+    margin: 49px auto 0 auto;
+}
+
+.shop__menu{
+    display: flex;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .1)
+}
+
+.shop__menu-item{
+    margin-left: 35px;
+    margin-top: 13px;
+}
+
+.shop__menu-item-link2{
+    color: green;
+}
+
+.shop__menu-item-link:hover{
+    color: red;
+}
+
+.shop__menu-line{
+    width: 1px;
+    height: 40px;
+    margin-left: 35px;
+}
+
+
+
+
+
+
+
+/* карточки магазина */
+
+.shop__cards{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 51px 94px 92px 94px;
+}
+
+.shop__card{
+    max-width: 285px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, .1);
+    background-color: #FFF;
+    margin: 0 14px 72px 14px;
+    border-radius: 10px;
+}
+
+.shop__card-link-img{
+    border-radius: 10px 10px 0 0;
+}
+
+.shop__card_link-img-box{
+    height: 160px;
+}
+
+
+.shop__card-name{
+    font-weight: 700;
+    font-size: 20px;
+    margin: 7px 55px 0 33px;
+}
+
+.shop__card-subscription{
+    opacity: 50%;
+    margin: 12px 124px 0 33px;
+}
+
+.shop__card-line1{
+    margin-top: 123px;
+    max-width: 285px;
+    height: 1px;
+}
+
+.shop__card-order-container{
+    display: flex;
+}
+
+.shop__card-price{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28.13px;
+    margin-top: 9.43px;
+    margin-bottom: 9.43px;
+    margin-left: 47.25px;
+}
+
+.shop__card-line2{
+    margin-left: 47.25px;
+    width: 1px;
+    height: 46.86px;
+}
+
+.shop__card-order-button{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    margin-left: 32.25px;
+    margin-top: 12.93px;
+    margin-bottom: 12.92px;
 }
