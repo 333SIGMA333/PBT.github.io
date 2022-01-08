@@ -649,16 +649,20 @@ hr{
 
 /* карточки магазина */
 
+.card__wrap_60-70leveling{
+    display: flex;
+}
+
 .shop__card{
     margin: 52px 0px 70px 50px;
-    max-width: 330px;
+    width: 330px;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, .1);
     background-color: #FFF;
     border-radius: 10px;
 }
 
 .shop__card_img-box{
-    height: 220px;
+    height: 218px;
     width: 100%;
 }
 
@@ -679,7 +683,6 @@ hr{
 .shop__card_form-label{
     font-size: 14px;
     font-weight: 500;
-    line-height: 16px;
     opacity: 0.3;
 }
 
@@ -697,7 +700,6 @@ hr{
     border-radius: 2px;
     font-size: 14px;
     font-weight: 700;
-    line-height: 16px;
 
     color: #000;
     padding-left: 8px;
@@ -734,11 +736,11 @@ hr{
     display: flex;
     font-size: 14px;
     font-weight: 700;
-    line-height: 16px; 
+    line-height: 17px;
 }
 
 .card__option-box+.card__option-box{
-    margin-top: 18px;
+    margin-top: 15px;
 }
 
 .card__option-text-after{
@@ -763,47 +765,319 @@ hr{
 
     color: #444;
     cursor: pointer;
+}
 
+.checkbox__label_text{
     opacity: 0.4;
+
 }
 
 .checkbox__label:before {
     content: "";
     display: block;
-    width: 15px;
-    height: 15px;
+    width: 13px;
+    height: 13px;
 
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
 
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
+
+    opacity: 0.4;
 }
 
 .checkbox__label:after {
     content: "";
     display: block;
-    width: 12px;
-    height: 12px;
+    width: 14px;
+    height: 14px;
 
-    background: url("check.svg") no-repeat;
-    background-size: 11px 11px;
+    background: url("/PBT_shop_page/card_page_leveling_60-70/img/tick-icon.svg") no-repeat;
+    background-size: 15px 15px;
     opacity: 0;
 
     position: absolute;
-    top: 3px;
-    left: 3px;
-    z-index: 2;
-}
-
-.checkbox__input:checked + .checkbox__label:before {
-    background-color: #139011;
-    border-color: #139011;
-    opacity: 100%;
+    top: 0px;
+    left: 0px;
 }
 
 .checkbox__input:checked + .checkbox__label:after {
     opacity: 1;
+}
+
+
+.desc__price{
+    font-weight: 700;
+    font-size: 28px;
+    margin-top: 55px;
+    color: #139011;
+    text-align: center;
+    margin-right: 30px;
+    line-height: 30px;
+}
+
+.shop__card::after{
+    content: '';
+    display: block;
+    position: relative;
+    background-color: #000;
+    opacity: 10%;
+    height: 1px;
+
+    top: -53px; 
+    left: 0px;
+}
+
+.shop__card_footer-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #fff;
+    height: 52px;
+    width: 330px;
+    outline: none;
+    border: none;
+    cursor: pointer;   
+    padding: 0; 
+
+}
+
+.shop__card_footer-button-box{
+    display: flex;
+    padding: 5px;
+}
+
+.shop__card_footer-button-img-box{
+    margin-top: 5px;
+    margin-bottom: 1px;
+}
+
+.shop__card_footer-button-text{
+    font-weight: 700;
+    font-size: 18px;
+    margin-left: 4px;
+    margin-top: 5px;
+    margin-bottom: 1px;
+}
+
+
+/* описание */
+
+
+
+.shop__desc_box{
+    height: 680px;
+    width: 610px;
+
+    margin-bottom: 15px;
+}
+
+.shop__desc{
+    margin: 52px 65px 70px 31px;
+}
+
+.service__ul{
+    list-style-type: circle;
+    padding-left: 25px;
+    padding-bottom: 35px;
+
+    font-weight: 500;
+    line-height: 19px;
+    font-size: 16px;
+}
+
+.service__box_li{
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.ul-sub{
+    list-style-type: circle;
+    padding-left: 25px;
+    padding-bottom: 35px;
+    color: rgba(0, 0, 0, 0.3);
+
+    font-weight: 500;
+    line-height: 19px;
+    font-size: 16px;
+}
+
+.rules__ul{
+    list-style-type: circle;
+    padding-left: 25px;
+    color: rgba(0, 0, 0, 0.3);
+
+    font-weight: 500;
+    line-height: 19px;
+    font-size: 16px;
+}
+
+.shop__desc_h1{
+    line-height: 36px;
+    font-size: 48px;
+    font-weight: 700;
+
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+.shop__desc_h2-service{
+    line-height: 21px;
+    font-size: 18px;
+    font-weight: 500;
+
+    margin: 0;
+    padding-bottom: 15px;
+}
+
+.shop__desc_subtext{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    
+    padding-bottom: 40px;
+}
+
+.shop__desc_h3-sub{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+
+    margin: 0;
+}
+
+.shop__desc_h4-rules{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+
+    margin: 0;
+}
+
+
+.shop__desc_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #139011;
+    height: 40px;
+    width: 610px;
+    outline: none;
+    border: none;
+    cursor: pointer;   
+    padding: 0; 
+}
+
+.shop__desc_button-text{
+    color: #fff;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.shop__desc::after{
+    content: '';
+    position: absolute;
+    width: 735px;
+    height: 0px;
+    left: 730px;
+    top: 570px;
+    
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transform: rotate(-90deg);
+}
+
+
+
+
+.shop__data{
+    margin-top: 52px;
+    margin-left: 40px;
+}
+
+.shop__data_nickname-box{
+    margin-top: 14px;
+    margin-bottom: 10px;
+}
+
+.nickname__text_label-box{
+    margin-bottom: 4px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.shop__data_title{
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    text-align: center;
+    
+    opacity: 0.2;
+}
+
+#nickname__text{
+    width: 240px;
+    height: 30px;
+
+    background: #FFFFFF;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.15);
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: rgba(0, 0, 0, 0.7);
+}
+
+input[type=text] {
+    padding-left: 6px;
+}
+
+#nickname__text:focus {
+    border-color: rgba(0, 0, 0, 0.5);
+    outline: none;
+}
+
+.shop__data-label{
+    margin-bottom: 4px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.shop__data_select-input{
+    -webkit-appearance: none;
+    appearance: none;
+
+    width: 240px;
+    height: 30px;
+
+    background: #FFFFFF;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0px;
+    box-sizing: border-box;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.15);
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+
+    padding-left: 8px;
+
+    transition: border-color .25s ease-out;
+
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.shop__data_select-input:focus{
+    border-color: rgba(0, 0, 0, 0.5);
+    outline: none;
 }
