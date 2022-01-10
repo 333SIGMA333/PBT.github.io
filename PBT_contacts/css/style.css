@@ -598,243 +598,67 @@ hr{
 
 
 
-/* о нас */
-
-
-.about__nav_box{
-    width: 480px;
-    height: 60px;
-
-    margin: 0 auto;
-}
-
-.about__nav_circle-box{
-    display: flex;
-    justify-content: space-between;
-    /* margin-left: 13px; */
-}
-
-.about__nav_circle{
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.4);
-    background-color: #fff;
-}
-
-.about__nav_circle1{
-    margin-left: 15px;
-}
-
-.about__nav_circle3{
-    margin-right: 45px;
-}
-
-.about__nav_circle:hover{
-    box-shadow: 0px 0px 10px rgba(229, 60, 60, 0.4);
-}
-
-.about__nav_text-box{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 9px;
-
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 21px;
-    opacity: 50%;
-}
-
-.about__nav_text2{
-    margin-left: 20px;
-}
-
-.about__nav_text-box + .about__nav_text-box{
-    margin-left: 5px;
-} 
-
-.about__nav{
-    margin-top: 45px;
-}
+/* Контакты */
 
 
 
-
-.about__history_box{
-    width: 920px;
-    height: 540px;
+.contacts__box{
+    width: 730px;
+    height: 610px;
 
     filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.1));
     background: #FFFFFF;
 
-    margin: 71px auto 0 auto;
-    padding-top: 30px;
+    margin: 49px auto 141px auto;
+    padding-top: 60px;
 }
 
-.about__history_h1{
-    font-weight: 700;
+.contacts__h1{
+    font-weight: 500;
     font-size: 26px;
     line-height: 30px;
 
-    width: 120px;
-    height: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-    margin-top: 0;
-
+    margin: 0px 0px 0px 66px;
 }
 
-.about__history_text{
-    width: 790px;
+.contacts__links_box{
+    width: 185px;
     height: 420px;
 
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
+    margin-top: 14px;
+    margin-left: 72px;
+    margin-bottom: 60px;
+}
 
+.contacts__links_blocks{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.contacts__links_circle{
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #EFEFEF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.contacts__links_text{
     color: rgba(0, 0, 0, 0.5);
-
-    margin: 0px auto 30px auto;
-}
-
-.color__text_green{
-    color: rgba(19, 144, 17, 1);
-}
-
-.color__text_black{
-    color: rgba(0, 0, 0, 0.7);
-}
-
-
-
-
-
-
-
-.about__recruiting_box{
-    width: 920px;
-    height: 400px;
-
-    filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.1));
-    background: #FFFFFF;
-
-    margin: 90px auto 0 auto;
-    padding-top: 30px;
-}
-
-.about__recruiting_h1{
     font-weight: 700;
     font-size: 26px;
     line-height: 30px;
 
-    width: 247px;
-    height: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-    margin-top: 0;
-
+    margin-left: 25px;
 }
 
-.about__recruiting_text{
-    width: 790px;
-    height: 93px;
-
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-
-    color: rgba(0, 0, 0, 0.5);
-
-    margin: 0px auto 30px auto;
+.contacts__links_blocks:hover .contacts__links_text{
+    color: #E53C3C;
+    text-shadow: 0px 4px 3px rgba(229, 60, 60, 0.35);
 }
 
-.about__recruiting_circle-box{
-    display: flex;
-    padding-left: 95px;
-    padding-right: 95px;
-}
-
-.about__recruiting_circle{
-    display: flex;
-    width: 160px;
-    height: 160px;
-    background: rgba(196, 196, 196, 0.1);
-    border: 1px solid #000000;
-    border-radius: 50%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.about__recruiting_circle-link + .about__recruiting_circle-link{
-    margin-left: 30px;
-}
-
-.about__recruiting_circle-text{
-    font-size: 20px;
-    line-height: 23px;
-    
-    color: rgba(0, 0, 0, 0.5);
-}
-
-
-
-
-
-.about__boosterofthemonth_box{
-    width: 920px;
-    height: 360px;
-
-    filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.1));
-    background: #FFFFFF;
-
-    margin: 90px auto 90px auto;
-    padding-top: 30px;
-}
-
-.about__boosterofthemonth_h1{
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 28px;
-
-    width: 195px;
-    height: 28px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 32px;
-    margin-top: 0;
-}
-
-.about__boosterofthemonth_circle-img-box{
-    position: relative;
-    overflow: hidden;
-    width: 160px;
-    height: 165px;
-    border-radius: 100%;
-    padding: 0px 380px 15px 340px;
-}
-
-.about__boosterofthemonth_circle-img{
-    width: 160px;
-    height: 165px;
-    position: absolute;
-    top: 35%;
-    left: 65%;
-    transform: translate(-50%,-50%);
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-}
-
-.about__boosterofthemonth_circle_text{
-    font-weight: 400;
-    font-size: 23px;
-    line-height: 27px;
-
-    color: rgba(0, 0, 0, 0.5);
-    text-align: center;
-
-    margin-top: 15px;
+.contacts__links_blocks:hover .contacts__links_circle{
+    background: #E53C3C;
+    box-shadow: 0px 0px 25px rgba(229, 60, 60, 0.5);
 }
