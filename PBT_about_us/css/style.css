@@ -485,7 +485,7 @@ hr{
     justify-content: space-between; 
 }
 
-.menu__link1{
+.menu__link2{
     color: green;
 }
 
@@ -682,7 +682,6 @@ hr{
     margin-right: auto;
     margin-bottom: 30px;
     margin-top: 0;
-
 }
 
 .about__history_text{
