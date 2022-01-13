@@ -62,7 +62,13 @@
 
             <div class="cabinet">
                 <a href="" class="cabinet__link">
-                    <div class="cabinet__text">Личный кабинет</div>
+                    <div class="cabinet__circle_img-box">
+                        <img src="/PBT_profile/img/logo.png" alt="" class="cabinet__circle_img">
+                    </div>
+                    <div class="cabinet__nick_money-box">
+                        <div class="cabinet__nick">ProBooster228</div>
+                        <div class="cabinet__money">25 $</div>
+                    </div>
                     <div class="cabinet__triangl"></div>
                 </a>
             </div>
@@ -112,7 +118,61 @@
                 </a>
             </div>
             <div class="profile__right_content-box">
-
+                <div class="profile__right_inf_box">
+                    <h1 class="profile__right_h1">Профиль</h1>
+                    <div class="profile__right_avatar-nick-box">
+                        <div class="profile__right_avatar-content-box">
+                            <div class="profile__right_avatar-img-box">
+                                <img src="/PBT_profile/img/coolicon.svg" alt="" class="profile__right_avatar-img">
+                                <div class="profile__right_avatar-upload-box">
+                                    <input type="file" id="profile__right_avatar-upload" accept=".jpg, .jpeg, .png">
+                                    <label for="file" class="profile__right_avatar-upload-label">Загрузить аватар</label>
+                                </div>
+                            </div>
+                            <a href="" class="profile__right_avatar-change-pass">Смена пароля</a>
+                        </div>
+                        <div class="profile__right_nick-content-box">
+                            <div class="profile__right_nick-input-box">
+                                <label for="text">Никнейм</label>
+                                <input type="text" id="profile__right_nick-input1" placeholder="ProBooster228">
+                            </div>
+                            <div class="profile__right_mail-input-box">
+                                <label for="email">Почта</label>
+                                <input type="email" id="profile__right_nick-input2" placeholder="boss322@gmail.com" readonly>    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile__right_contacts_box">
+                    <h1 class="profile__right_contacts-h1">Мои контакты</h1>
+                    <div class="profile__right_contacts-input-content-box">
+                        <div class="profile__right_contacts-input-box">
+                            <label for="text">Discord</label>
+                            <input type="text" id="profile__right_contacts-input" placeholder="введите ваш дискорд">
+                        </div>
+                        <div class="profile__right_contacts-input-box">
+                            <label for="text">Telegram</label>
+                            <input type="text" id="profile__right_contacts-input" placeholder="введите ваш телеграм">
+                        </div>
+                        <div class="profile__right_contacts-input-box">
+                            <label for="text">WhatsApp</label>
+                            <input type="text" id="profile__right_contacts-input" placeholder="введите ваш ватсап">
+                        </div>
+                        <div class="profile__right_contacts-input-box">
+                            <label for="text">ВКонтакте</label>
+                            <input type="text" id="profile__right_contacts-input" placeholder="введите ваш вк">
+                        </div>
+                        <div class="profile__right_contacts-input-box">
+                            <label for="text">Viber</label>
+                            <input type="text" id="profile__right_contacts-input" placeholder="введите ваш вайбер">
+                        </div>
+                        <div class="profile__right_contacts-input-box">
+                            <label for="text">Skype</label>
+                            <input type="text" id="profile__right_contacts-input" placeholder="введите ваш скайп">
+                        </div>
+                    </div>
+                </div>
+                <button class="profile__right_btn">Сохранить изменения</button>
             </div>
         </section>
     </main>
