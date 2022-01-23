@@ -766,7 +766,8 @@ color: #139011;
 
 .profile__left_trans-box:hover{
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    background: rgba(19, 144, 17, 0.3);
+    border: 1px solid #139011;     
+    color: #139011;
 }
 
 .profile__left_trans-box:after{

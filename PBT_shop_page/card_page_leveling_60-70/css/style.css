@@ -1023,30 +1023,30 @@ hr{
     margin-bottom: 14px;
 }
 
-#nickname__text{
-    width: 240px;
-    height: 30px;
+    #nickname__text{
+        width: 240px;
+        height: 30px;
 
-    background: #FFFFFF;
-    border: 2px solid rgba(0, 0, 0, 0.2);
-    box-sizing: border-box;
-    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.1);
+        background: #FFFFFF;
+        border: 2px solid rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+        box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.1);
 
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
 
-    color: rgba(0, 0, 0, 0.7);
-}
+        color: rgba(0, 0, 0, 0.7);
+    }
 
-input[type=text] {
-    padding-left: 6px;
-}
+    input[type=text] {
+        padding-left: 6px;
+    }
 
-#nickname__text:focus {
-    border-color: rgba(0, 0, 0, 0.5);
-    outline: none;
-}
+    #nickname__text:focus {
+        border-color: rgba(0, 0, 0, 0.5);
+        outline: none;
+    }
 
 .shop__data-label{
     margin-bottom: 4px;
