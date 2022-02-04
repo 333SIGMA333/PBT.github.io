@@ -61,12 +61,27 @@
             </a>
 
             <div class="cabinet">
-                <a href="" class="cabinet__link">
-                    <div class="cabinet__text">Личный кабинет</div>
+                <a href="#" class="cabinet__link" id="cabinet__link">
+                    <div class="cabinet__text" id="cabinet__text">Личный кабинет</div>
                     <div class="cabinet__triangl"></div>
                 </a>
             </div>
         </container>
+        <!-- выпадающее меню -->
+        <ul id="header__cabinet_dropdown-menu">
+            <li>
+                <a href="" class="header__cabinet_enter">Войти</a>
+            </li>
+            <li>
+                <a href="" class="header__cabinet_registrartion">Регистрация</a>
+            </li>
+            <li>
+                <a href="#" class="header__cabinet_language">
+                    <div class="language__cabinet_text">Язык</div>
+                    <img src="/PBT_shop_page/img/ru.jpg" alt="" class="language__cabinet_img-ru">
+                </a>
+            </li>
+        </ul>
 
         <!-- палочка -->
         <hr class="header__line">
@@ -98,7 +113,7 @@
                 Группы людей, которые занимались индивидуальным предоставлением услуг объединились в большую и дружную команду, которая и по сей день предоставляет качественные услуги РМТ. <br>
                 Со временем поменялось большое количество людей, поменялась структура работы и теперь в нашей команде остались настоящие ветераны РМТ, а наша организация достигла высокой эффективности в выполнении нашем любимой работы. <br>
                 На данный момент мы продолжаем развиваться, набирать новых людей в команду,расширяться, поэтому наша команда будет ещё долгое время оставаться в тонусе и продолжать предоставлять качественные услуги на рынке РМТ услуг.
-                <p></p>Мы предоставляем <a href="" class="color__text_green">большой спектр услуг</a>  в <a href="" class="color__text_black">World of Warcraft: Burning Crusade, World of Warcraft: Shadowlands, World of Warcraft: SoM</a> . <br>
+                <p></p>Мы предоставляем <a href="" class="color__text_green">большой спектр услуг</a>  в <span class="color__text_black">World of Warcraft: Burning Crusade, World of Warcraft: Shadowlands, World of Warcraft: SoM</span> . <br>
                 У нас вы можете <a href="" class="color__text_green">заказать услуги</a>:  по прокачка уровней, профф, драйвингу, поднятию рейтинга, фарму хонора, одеванию в пререйд, РЛьству, продаже голды, закрытию ключей, закрытию рейдов, фарму шмота и многому другому. 
                 <p></p>У нас есть клиенты с которыми мы продолжаем работать с давних времён по сей день. Наша клиентская база с каждым днём расширяется и если вы бустер, то вы можете оставить на нашем сайте заявку в команду, работа для вас всегда найдётся.  
             </div>
@@ -139,11 +154,13 @@
                 <div class="about__boosterofthemonth_circle-img-box">
                     <img src="/PBT_about_us/img/Ilya-photo.jpg" alt="" class="about__boosterofthemonth_circle-img">
                 </div>
-                <div class="">Илья <br> Менеджер</div>
+                <div class="about__boosterofthemonth_circle_text">Илья <br> Менеджер</div>
             </div>
         </div>
     </article>
 
+
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
