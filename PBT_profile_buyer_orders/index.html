@@ -20,7 +20,7 @@
 
         <container class="wrap">
             <div class="logo">
-                <img src="/PBT_profile_buyer_orders/img/logo.png" alt="" class="logo__icon">
+                <img src="/PBT_shop_page/img/logo.png" alt="" class="logo__icon">
                 <div class="logo__text">PROBOOSTEAM</div>
             </div>
 
@@ -51,28 +51,50 @@
                 <div class="cart__circle">
                     <div class="cart__circle-text">1</div>
                 </div>
-                <img src="/PBT_profile_buyer_orders/img/cart-icon.svg" alt="" class="cart__icon">
+                <img src="/PBT_shop_page/img/cart-icon.svg" alt="" class="cart__icon">
                 <div class="cart__text">Корзина</div>
             </a>
 
             <a href="#" class="language">
-                <img src="/PBT_profile_buyer_orders/img/ru.jpg" alt="" class="language__menu_img-ru">
+                <img src="/PBT_shop_page/img/ru.jpg" alt="" class="language__menu_img-ru">
                 <div class="language__text">Язык</div>
             </a>
 
             <div class="cabinet">
-                <a href="" class="cabinet__link">
+                <a href="#" class="cabinet__link" id="cabinet__link">
                     <div class="cabinet__circle_img-box">
-                        <img src="/PBT_profile_buyer_orders/img/logo.png" alt="" class="cabinet__circle_img">
+                        <img src="/PBT_profile_buyer/img/logo.png" alt="" class="cabinet__circle_img">
                     </div>
                     <div class="cabinet__nick_money-box">
-                        <div class="cabinet__nick">ProBooster228</div>
+                        <div class="cabinet__nick" id="cabinet__text">ProBooster228</div>
                         <div class="cabinet__money">25 $</div>
                     </div>
                     <div class="cabinet__triangl"></div>
                 </a>
             </div>
         </container>
+        <!-- выпадающее меню -->
+        <ul id="header__cabinet_dropdown-menu">
+            <li>
+                <a href="" class="header__cabinet_profile">Профиль</a>
+            </li>
+            <li>
+                <a href="" class="header__cabinet_orders">Мои заказы</a>
+            </li>
+            <li>
+                <a href="#" class="header__cabinet_language">
+                    <div class="language__cabinet_text">Язык</div>
+                    <img src="/PBT_shop_page/img/ru.jpg" alt="" class="language__cabinet_img-ru">
+                </a>
+            </li>
+            <li>
+                <a href="" class="header__cabinet_admin">Админка</a>
+            </li>
+            <li>
+                <a href="" class="header__cabinet_exit">Выйти</a>
+            </li>
+            
+        </ul>
 
         <!-- палочка -->
         <hr class="header__line">
@@ -121,43 +143,55 @@
                 <div class="profile__right_inf_box">
                     <h1 class="profile__right_h1">Мои заказы</h1>
                     <div class="profile__right_order-box">
-                        <div class="profile__right_order-content-box">
+                        <div class="profile__right_order-content-box" id="profile__right_order-content-box1">
                             <div class="profile__right_order_img-box">
                                 <img src="./img/card-icon-98-73.png" alt="">
                             </div>
                             <div class="profile__right_order_inf-box">
                                 <div class="profile__right_order_title">#235 Прокачка 60-70 TBC</div>
                                 <div class="profile__right_order_subtitle">PvP сервер +Летающий маунт(60%)</div>
-                                <div class="profile__right_order_status">Статус: <span class="red">выполняется</span></div>
+                                <div class="profile__right_order_status">Статус: <span class="red" id="red">выполняется</span></div>
                             </div>
                             <div class="profile__right_order_price-box">
                                 <div class="profile__right_order_price">284$</div>
+                                <div class="profile__right_order_price_clear_box" id="profile__right_order_price_clear_box1">
+                                    <div class="profile__right_order_price_clear_left"></div>
+                                    <div class="profile__right_order_price_clear_right"></div>
+                                </div>
                             </div>
                         </div>
-                        <div class="profile__right_order-content-box">
+                        <div class="profile__right_order-content-box" id="profile__right_order-content-box2">
                             <div class="profile__right_order_img-box">
                                 <img src="./img/card-icon-98-73.png" alt="">
                             </div>
-                            <div class="profile__right_order_inf-box">
+                            <div class="profile__right_order_inf-box" id="profile__right_order_inf-box2">
                                 <div class="profile__right_order_title">#235 Прокачка 60-70 TBC</div>
                                 <div class="profile__right_order_subtitle">PvP сервер +Летающий маунт(60%)</div>
-                                <div class="profile__right_order_status">Статус: <span class="green">готово</span></div>
+                                <div class="profile__right_order_status" id="profile__right_order_status2">Статус: <span class="green" id="green">готово</span></div>
                             </div>
                             <div class="profile__right_order_price-box">
                                 <div class="profile__right_order_price">284$</div>
+                                <div class="profile__right_order_price_clear_box" id="profile__right_order_price_clear_box2">
+                                    <div class="profile__right_order_price_clear_left"></div>
+                                    <div class="profile__right_order_price_clear_right"></div>
+                                </div>
                             </div>
                         </div>
-                        <div class="profile__right_order-content-box">
+                        <div class="profile__right_order-content-box" id="profile__right_order-content-box3">
                             <div class="profile__right_order_img-box">
                                 <img src="./img/card-icon-98-73.png" alt="">
                             </div>
                             <div class="profile__right_order_inf-box">
                                 <div class="profile__right_order_title">#235 Прокачка 60-70 TBC</div>
                                 <div class="profile__right_order_subtitle">PvP сервер +Летающий маунт(60%)</div>
-                                <div class="profile__right_order_status">Статус: <span class="red">выполняется</span></div>
+                                <div class="profile__right_order_status">Статус: <span class="red" id="red">выполняется</span></div>
                             </div>
                             <div class="profile__right_order_price-box">
                                 <div class="profile__right_order_price">284$</div>
+                                <div class="profile__right_order_price_clear_box" id="profile__right_order_price_clear_box3">
+                                    <div class="profile__right_order_price_clear_left"></div>
+                                    <div class="profile__right_order_price_clear_right"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -166,6 +200,7 @@
         </section>
     </main>
 
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

@@ -20,7 +20,7 @@
 
         <container class="wrap">
             <div class="logo">
-                <img src="/PBT_profile_buyer/img/logo.png" alt="" class="logo__icon">
+                <img src="/PBT_shop_page/img/logo.png" alt="" class="logo__icon">
                 <div class="logo__text">PROBOOSTEAM</div>
             </div>
 
@@ -51,28 +51,37 @@
                 <div class="cart__circle">
                     <div class="cart__circle-text">1</div>
                 </div>
-                <img src="/PBT_profile_buyer/img/cart-icon.svg" alt="" class="cart__icon">
+                <img src="/PBT_shop_page/img/cart-icon.svg" alt="" class="cart__icon">
                 <div class="cart__text">Корзина</div>
             </a>
 
             <a href="#" class="language">
-                <img src="/PBT_profile_buyer/img/ru.jpg" alt="" class="language__menu_img-ru">
+                <img src="/PBT_shop_page/img/ru.jpg" alt="" class="language__menu_img-ru">
                 <div class="language__text">Язык</div>
             </a>
 
             <div class="cabinet">
-                <a href="" class="cabinet__link">
-                    <div class="cabinet__circle_img-box">
-                        <img src="/PBT_profile_buyer/img/logo.png" alt="" class="cabinet__circle_img">
-                    </div>
-                    <div class="cabinet__nick_money-box">
-                        <div class="cabinet__nick">ProBooster228</div>
-                        <div class="cabinet__money">25 $</div>
-                    </div>
+                <a href="#" class="cabinet__link" id="cabinet__link">
+                    <div class="cabinet__text" id="cabinet__text">Личный кабинет</div>
                     <div class="cabinet__triangl"></div>
                 </a>
             </div>
         </container>
+        <!-- выпадающее меню -->
+        <ul id="header__cabinet_dropdown-menu">
+            <li>
+                <a href="" class="header__cabinet_enter">Войти</a>
+            </li>
+            <li>
+                <a href="" class="header__cabinet_registrartion">Регистрация</a>
+            </li>
+            <li>
+                <a href="#" class="header__cabinet_language">
+                    <div class="language__cabinet_text">Язык</div>
+                    <img src="/PBT_shop_page/img/ru.jpg" alt="" class="language__cabinet_img-ru">
+                </a>
+            </li>
+        </ul>
 
         <!-- палочка -->
         <hr class="header__line">
@@ -234,6 +243,7 @@
         </section>
     </main>
 
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

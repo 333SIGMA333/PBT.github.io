@@ -20,7 +20,7 @@
 
         <container class="wrap">
             <div class="logo">
-                <img src="/PBT_profile_buyer/img/logo.png" alt="" class="logo__icon">
+                <img src="/PBT_shop_page/img/logo.png" alt="" class="logo__icon">
                 <div class="logo__text">PROBOOSTEAM</div>
             </div>
 
@@ -51,28 +51,50 @@
                 <div class="cart__circle">
                     <div class="cart__circle-text">1</div>
                 </div>
-                <img src="/PBT_profile_buyer/img/cart-icon.svg" alt="" class="cart__icon">
+                <img src="/PBT_shop_page/img/cart-icon.svg" alt="" class="cart__icon">
                 <div class="cart__text">Корзина</div>
             </a>
 
             <a href="#" class="language">
-                <img src="/PBT_profile_buyer/img/ru.jpg" alt="" class="language__menu_img-ru">
+                <img src="/PBT_shop_page/img/ru.jpg" alt="" class="language__menu_img-ru">
                 <div class="language__text">Язык</div>
             </a>
 
             <div class="cabinet">
-                <a href="" class="cabinet__link">
+                <a href="#" class="cabinet__link" id="cabinet__link">
                     <div class="cabinet__circle_img-box">
                         <img src="/PBT_profile_buyer/img/logo.png" alt="" class="cabinet__circle_img">
                     </div>
                     <div class="cabinet__nick_money-box">
-                        <div class="cabinet__nick">ProBooster228</div>
+                        <div class="cabinet__nick" id="cabinet__text">ProBooster228</div>
                         <div class="cabinet__money">25 $</div>
                     </div>
                     <div class="cabinet__triangl"></div>
                 </a>
             </div>
         </container>
+        <!-- выпадающее меню -->
+        <ul id="header__cabinet_dropdown-menu">
+            <li>
+                <a href="" class="header__cabinet_profile">Профиль</a>
+            </li>
+            <li>
+                <a href="" class="header__cabinet_orders">Мои заказы</a>
+            </li>
+            <li>
+                <a href="#" class="header__cabinet_language">
+                    <div class="language__cabinet_text">Язык</div>
+                    <img src="/PBT_shop_page/img/ru.jpg" alt="" class="language__cabinet_img-ru">
+                </a>
+            </li>
+            <li>
+                <a href="" class="header__cabinet_admin">Админка</a>
+            </li>
+            <li>
+                <a href="" class="header__cabinet_exit">Выйти</a>
+            </li>
+            
+        </ul>
 
         <!-- палочка -->
         <hr class="header__line">
@@ -245,44 +267,45 @@
                 <h3 class="profile__booster_list-checkout-pay-h3">Оплата</h3>
                 <div class="profile__booster_list-checkout-pay-box">
                     <div class="profile__booster_list-checkout-pay-content-box">
-                        <div class="profile__booster_list-checkout-pay-card">
+                        <div class="profile__booster_list-checkout-pay-card" id="profile__booster_list-checkout-pay-card1">
                             <img src="/PBT_order_checkout/img/visa.jpg" alt="" class="profile__booster_list-checkout-pay-img">
                         </div>
-                        <div class="profile__booster_list-checkout-pay-card">
+                        <div class="profile__booster_list-checkout-pay-card" id="profile__booster_list-checkout-pay-card2">
                             <img src="/PBT_order_checkout/img/apple.jpg" alt="" class="profile__booster_list-checkout-pay-img">
                         </div>
                     </div>
                     <div class="profile__booster_list-checkout-pay-content-box">
-                        <div class="profile__booster_list-checkout-pay-card">
+                        <div class="profile__booster_list-checkout-pay-card" id="profile__booster_list-checkout-pay-card3">
                             <img src="/PBT_order_checkout/img/help.jpg" alt="" class="profile__booster_list-checkout-pay-img">
                         </div>
-                        <div class="profile__booster_list-checkout-pay-card">
+                        <div class="profile__booster_list-checkout-pay-card" id="profile__booster_list-checkout-pay-card4">
                             <img src="/PBT_order_checkout/img/priamoy.jpg" alt="" class="profile__booster_list-checkout-pay-img">
                         </div>
                     </div>
                     <div class="profile__booster_list-checkout-pay-content-box">
-                        <div class="profile__booster_list-checkout-pay-card">
+                        <div class="profile__booster_list-checkout-pay-card" id="profile__booster_list-checkout-pay-card5">
                             <img src="/PBT_order_checkout/img/wmz.jpg" alt="" class="profile__booster_list-checkout-pay-img">
                         </div>
-                        <div class="profile__booster_list-checkout-pay-card">
+                        <div class="profile__booster_list-checkout-pay-card" id="profile__booster_list-checkout-pay-card6">
                             <img src="/PBT_order_checkout/img/payooneer.jpg" alt="" class="profile__booster_list-checkout-pay-img">
                         </div>
                     </div>
                     <div class="profile__booster_list-checkout-pay-content-box">
-                        <div class="profile__booster_list-checkout-pay-card">
+                        <div class="profile__booster_list-checkout-pay-card" id="profile__booster_list-checkout-pay-card7">
                             <img src="/PBT_order_checkout/img/bank.jpg" alt="" class="profile__booster_list-checkout-pay-img">
                         </div>
                     </div>
 
-                    <div class="profile__booster_list-checkout-commission-box">
-                        <div class="profile__booster_list-checkout-commission1">Комиссия 10% (взимается при оплате)</div>
-                        <div class="profile__booster_list-checkout-commission2">Включают в себя налоги и комиссию системы</div>
+                    <div class="profile__booster_list-checkout-commission-box" id="profile__booster_list-checkout-commission-box">
+                        <div class="profile__booster_list-checkout-commission1" id="profile__booster_list-checkout-commission1">Комиссия 10% (взимается при оплате)</div>
+                        <div class="profile__booster_list-checkout-commission2" id="profile__booster_list-checkout-commission2">Включают в себя налоги и комиссию системы</div>
                     </div>
                 </div>
                 <button class="profile__booster_list-checkout-pay-btn">Оплатить</button>
         </section>
     </main>
 
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

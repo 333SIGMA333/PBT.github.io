@@ -497,7 +497,7 @@ hr{
     padding-top: 24px;
 }
 
-.menu__link5{
+.menu__link2{
     color: green;
 }
 
@@ -1290,7 +1290,8 @@ hr{
     .about__nav_box{
         width: 272px;
         margin-top: 100px;
-        margin-left: 19px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .about__history_box{

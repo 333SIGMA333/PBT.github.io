@@ -452,6 +452,14 @@ hr{
 
 /* НАВИГАЦИЯ */
 
+.header{
+    position: relative;
+
+    width: 1350px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .wrap{
     display: flex;
 }
@@ -459,7 +467,6 @@ hr{
 .logo{
     display: flex;
     justify-content: space-between;
-    margin-left: 32px;
 }
 
 .logo__icon{
@@ -475,13 +482,26 @@ hr{
 }
 
 .navigation{
-    margin-top: 23px;
+    padding-top: 23px;
     margin-left: 285px;
 }
 
 .menu__list{
     display: flex;
     justify-content: space-between; 
+}
+
+.menu__link{
+    padding-bottom: 24px;
+    padding-top: 24px;
+}
+
+.menu__item2{
+    min-width: 35px;
+}
+
+.menu__item6{
+    min-width: 62px;
 }
 
 .menu__item + .menu__item{
@@ -569,51 +589,98 @@ hr{
     margin-left: 14px;
 }
 
-.cabinet__circle_img-box{
-    margin-top: 10px;
-    position: relative;
-    overflow: hidden;
-    width: 40px;
-    height: 40px;
-    border-radius: 100%;
-}
-
-.cabinet__circle_img{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-}
-
-.cabinet__nick_money-box{
-    margin-top: 17px;
-    margin-left: 5px;
-}
-
-.cabinet__money{
-    font-weight: normal;
-    font-size: 10px;
-    line-height: 12px;
-
-    color: #139011;
+.cabinet__text{
+    margin-top: 23px;
 }
 
 .cabinet__triangl{
-    margin-top: 20px;
+    margin-top: 27px;
     margin-left: 3px;
-    border: 4px solid transparent; border-top: 7px solid #000;
+    border: 4px solid transparent; 
+    border-top: 7px solid #000;
 }
 
 .header__line {
     margin-top: 10px;
-    margin-left: 32px;
-    margin-right: 32px;
     margin-bottom: 0px;
-    max-width: 1375px;
+    max-width: 1345px;
     height: 1px;
+
+    z-index: 2;
+}
+
+#header__cabinet_dropdown-menu{
+    position: absolute;
+
+    display: none;
+
+    width: 104px;
+    height: 40px;
+
+    border: none;
+    -webkit-box-shadow: rgba(0,0,0,0.22) 0 1px 4px;
+    box-shadow: rgba(0,0,0,0.22) 0 1px 4px;
+    background-color: #fff;
+
+    right: 0;
+
+    margin-right: 12px;
+
+    z-index: 1;
+
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.header__cabinet_enter{
+    display: flex;
+    align-items: center;
+    height: 20px;
+
+    opacity: 0.5;
+
+    padding-left: 5px;
+}
+
+.header__cabinet_enter:hover{
+    opacity: 1;
+}
+
+.header__cabinet_registrartion{
+    display: flex;
+    align-items: center;
+
+    height: 20px;
+
+    color: rgba(0, 0, 0, 0.5);
+    border-top: #cfcfcf 1px solid;
+
+    padding-left: 5px;
+}
+
+.header__cabinet_registrartion:hover{
+    color: rgba(0, 0, 0, 1);
+}
+
+.header__cabinet_language{
+    display: none;
+    align-items: center;
+
+    height: 20px;
+
+    color: rgba(0, 0, 0, 0.5);
+    border-top: #cfcfcf 1px solid;
+
+    padding-left: 5px;
+}
+
+.language__cabinet_img-ru{
+    margin-left: 5px;
+}
+
+.header__cabinet_language:hover{
+    color: rgba(0, 0, 0, 1);
 }
 
 
@@ -660,10 +727,6 @@ hr{
 
 .profile__booster-list-order-box + .profile__booster-list-order-box{
     margin-top: 20px;
-}
-
-.profile__right_order_img-box{
-    cursor: pointer;
 }
 
 .profile__booster_list-order-content-box{
@@ -741,6 +804,8 @@ hr{
 .profile__booster_list-order_trash-img{
     margin-top: 23px;
     margin-left: 3px;
+
+    cursor: pointer;
 }
 
 .profile__booster_list-order-btn-box{
@@ -788,4 +853,372 @@ hr{
 
 .profile__booster_list-order-checkout-buy:hover{
     background: #19c216;
+}
+
+
+
+/* медиа-запросы */
+
+
+
+
+@media (max-width: 1400px) {
+    .navigation{
+        margin-left: 65px;
+    }
+
+    .header{
+        width: 894px;
+    }
+
+    .menu__item + .menu__item {
+        margin-left: 15px;
+    }
+    
+    .language{
+        margin-left: 20px;
+    }
+
+    .cart{
+        margin-left: 45px;
+    }
+
+    #header__cabinet_dropdown-menu{
+        margin-right: 7px;
+    }
+
+    /* авторизация ящик */
+
+    .profile__box{
+        width: 650px;
+        height: 600px;
+        padding-top: 10px;
+    }
+
+    .profile_booster_list-order-box-box{
+        width: 620px;
+        margin-top: 10px;
+    }
+
+    .profile__booster-list-order-box{
+        margin-left: 40px;
+    }
+
+    .profile__booster_list-order-next-buy{
+        margin-left: 16%;
+    }
+}
+
+@media (max-width: 940px) {
+    .header{
+        width: 813px;
+    }
+
+    .logo__text{
+        display: none;
+    }
+
+    #header__cabinet_dropdown-menu{
+        margin-right: 2px;
+        margin-top: 3px;
+    }
+
+    .cabinet__text{
+        display: none;
+    }
+
+    .cabinet__triangl{
+        margin-top: 23px;
+        margin-left: 3px;
+
+        border: 0px solid;
+
+        height: 1px;
+        width: 30px;
+
+        background-color: #000;
+    }
+
+    .cabinet__triangl::before{
+        content: '';
+
+        display: block;
+
+        height: 1px;
+        width: 30px;
+
+        background-color: #000;
+
+        margin-top: 7px;
+    }
+
+    .cabinet__triangl::after{
+        content: '';
+
+        display: block;
+
+        height: 1px;
+        width: 30px;
+
+        background-color: #000;
+
+        margin-top: 7px;
+    }
+
+    .navigation{
+        margin-left: 95px;
+    }
+
+    .menu__item + .menu__item {
+        margin-left: 30px;
+    }
+
+    .cart{
+        margin-left: 75px;
+    }
+
+    .cabinet__link{
+        padding-bottom: 20px;
+        margin-left: 36px;
+    }
+
+    #header__cabinet_dropdown-menu{
+        height: 60px;
+    }
+
+    .header__cabinet_language{
+        display: flex;
+    }
+
+    .language{
+        display: none;
+    }
+
+    /* авторизация ящик */
+}
+
+@media (max-width: 824px) {
+    .navigation{
+        margin-left: 20px;
+    }
+
+    .cart{
+        margin-left: 25px;
+    }
+
+    .cabinet__link{
+        margin-left: 20px;
+    }
+
+    .header{
+        width: 650px;
+    }
+
+    .menu__item + .menu__item{
+        margin-left: 25px;
+    }
+
+    /* гарантии ящик */
+}
+
+@media (max-width: 659px) {
+    .header{
+        width: 423px;
+    }
+
+    .navigation{
+        position: absolute;
+
+        margin-top: 50px;
+        margin-left: 0;
+    }
+
+    .logo__text{
+        display: block;
+    }
+
+    .cart{
+        margin-left: 149px;
+    }
+
+    .menu__link{
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    /* гарантии ящик */
+
+    .profile__box{
+        width: 423px;   
+        height: 560px;
+
+        padding-top: 10px;
+
+        margin-top: 70px;
+    }
+
+    .profile_booster_list-order-box-box{
+        width: 427px;
+        margin-top: 15px;
+    }
+
+    .profile__booster-list-order-box{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .profile__booster_list-order-next-buy{
+        margin-left: 0.7%;
+    }
+
+    .profile__booster_list-order-content-box{
+        height: 70px;
+    }
+
+    .profile__booster_list-order-btn-box{
+        margin-top: 5px;
+    }
+
+    .profile_booster_list-order-box-box::-webkit-scrollbar{
+        width: none; 
+        border: none; 
+        background: none; 
+    }
+    .profile_booster_list-order-box-box::-webkit-scrollbar-thumb{
+        background: none;
+    }
+
+    .profile__booster_list-order_title{
+        width: 220px;
+    }
+
+    .profile__booster_list-order_inf-box{
+        margin-left: 5px;
+    }
+
+    .profile__booster_list-order_price{
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+}
+
+@media (max-width: 440px) {
+    .header{
+        width: 272px;
+    }
+
+    .logo__text{
+        display: none;
+    }
+
+    .cart{
+        margin-left: 90px;
+    }
+
+    .menu__list{
+        flex-wrap: wrap;
+    }
+
+    .navigation{
+        width: 250px;
+
+        margin-left: 12px;
+    }
+
+    .menu__item + .menu__item{
+        margin-left: 0;
+    }
+
+    .menu__link2{
+        margin-left: 25px;
+    }
+
+    .menu__link3{
+        margin-left: 25px;
+    }
+
+    .menu__link4{
+        margin-left: 20px;
+    }
+
+    .menu__item4{
+        margin-top: 15px;
+    }
+
+    .menu__item5{
+        margin-top: 15px;
+    }
+
+    .menu__item6{
+        margin-right: 20px;
+        margin-top: 15px;
+    }
+
+    .menu__item:hover{
+        animation: none;
+    }
+    
+    /* гарантии ящик */
+
+    .profile__box{
+        width: 272px;
+        height: 535px;
+        
+        margin-top: 100px;
+        margin-bottom: 30px;
+
+        padding-top: 0;
+        padding-bottom: 0px;
+    }
+
+    .profile__booster_order-list-h1{
+        width: 273px;
+        padding: 0;
+
+        font-size: 32px;
+    }
+
+    .profile_booster_list-order-box-box{
+        margin-top: 0;
+        
+        width: 270px;
+    }
+
+    .profile__booster_list-order_inf-box{
+        width: 120px;
+    }
+    .profile__booster_list-order_title{
+        width: 120px;
+    }
+
+    .profile__booster-list-order-box{
+        width: 240px;
+    }
+
+    .profile__right_order_img-box img{
+        width: 40px;
+        height: 40px;
+
+        margin-top: 15px;
+    }
+
+    .profile__booster_list-order_title{
+        line-height: 14px;
+        font-size: 13px;
+    }
+
+    .profile__booster_list-order_subtitle{
+        line-height: 12px;
+        font-size: 10px;
+    }
+
+    .profile__booster_list-order-next-buy{
+        width: 125px;
+        font-size: 10px;
+    }
+
+    .profile__booster_list-order-checkout-buy{
+        width: 125px;
+        font-size: 12px;
+    }
 }

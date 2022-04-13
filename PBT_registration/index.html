@@ -61,12 +61,27 @@
             </a>
 
             <div class="cabinet">
-                <a href="" class="cabinet__link">
-                    <div class="cabinet__text">Личный кабинет</div>
+                <a href="#" class="cabinet__link" id="cabinet__link">
+                    <div class="cabinet__text" id="cabinet__text">Личный кабинет</div>
                     <div class="cabinet__triangl"></div>
                 </a>
             </div>
         </container>
+        <!-- выпадающее меню -->
+        <ul id="header__cabinet_dropdown-menu">
+            <li>
+                <a href="" class="header__cabinet_enter">Войти</a>
+            </li>
+            <li>
+                <a href="" class="header__cabinet_registrartion">Регистрация</a>
+            </li>
+            <li>
+                <a href="#" class="header__cabinet_language">
+                    <div class="language__cabinet_text">Язык</div>
+                    <img src="/PBT_shop_page/img/ru.jpg" alt="" class="language__cabinet_img-ru">
+                </a>
+            </li>
+        </ul>
 
         <!-- палочка -->
         <hr class="header__line">
@@ -81,8 +96,10 @@
                 <input placeholder="Пароль" type="password" id="registration__input">
                 <input placeholder="Повторите пароль" type="password" id="registration__input">
                 <div class="registration__checkbox">
-                    <input class="checkbox__input" type="checkbox" id="checkbox_1">
+                    
                     <label class="checkbox__label" for="checkbox_1">
+                        <img src="./img/tick-icon.svg" alt="" id="checkbox__label_img">
+                        <input class="checkbox__input" type="checkbox" id="checkbox_1" onchange="checkbox_tick()">
                         <span class="checkbox__label_text1">Да, я хотел бы получать эксклюзивные</span>
                         <span class="checkbox__label_text2">предложения по электронной почте.</span>
                     </label>
@@ -92,6 +109,7 @@
         </section>
     </main>
 
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

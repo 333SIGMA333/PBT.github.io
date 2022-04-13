@@ -61,12 +61,27 @@
             </a>
 
             <div class="cabinet">
-                <a href="" class="cabinet__link">
-                    <div class="cabinet__text">Личный кабинет</div>
+                <a href="#" class="cabinet__link" id="cabinet__link">
+                    <div class="cabinet__text" id="cabinet__text">Личный кабинет</div>
                     <div class="cabinet__triangl"></div>
                 </a>
             </div>
         </container>
+        <!-- выпадающее меню -->
+        <ul id="header__cabinet_dropdown-menu">
+            <li>
+                <a href="" class="header__cabinet_enter">Войти</a>
+            </li>
+            <li>
+                <a href="" class="header__cabinet_registrartion">Регистрация</a>
+            </li>
+            <li>
+                <a href="#" class="header__cabinet_language">
+                    <div class="language__cabinet_text">Язык</div>
+                    <img src="/PBT_shop_page/img/ru.jpg" alt="" class="language__cabinet_img-ru">
+                </a>
+            </li>
+        </ul>
 
         <!-- палочка -->
         <hr class="header__line">
@@ -105,6 +120,7 @@
         </section>
     </main>
 
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
