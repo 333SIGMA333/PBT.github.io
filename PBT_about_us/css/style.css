@@ -766,6 +766,10 @@ hr{
     padding-top: 30px;
 }
 
+.about__history_h1_anchor{
+    display: block;
+}
+
 .about__history_h1{
     font-weight: 700;
     font-size: 26px;
@@ -828,7 +832,10 @@ hr{
     margin-right: auto;
     margin-bottom: 30px;
     margin-top: 0;
+}
 
+about__recruiting_h1_anchor{
+    display: block;
 }
 
 .about__recruiting_text{
@@ -908,6 +915,10 @@ hr{
     margin-right: auto;
     margin-bottom: 32px;
     margin-top: 0;
+}
+
+.about__boosterofthemonth_h1_anchor{
+    display: block;
 }
 
 .about__boosterofthemonth_circle-img-box{

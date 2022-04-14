@@ -999,6 +999,10 @@ hr{
     font-size: 26px;
 }
 
+.shop__desc_button_link{
+    display: block;
+}
+
 
 /* описание */
 
