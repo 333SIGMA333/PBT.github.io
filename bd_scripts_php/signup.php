@@ -10,6 +10,7 @@ $pass = filter_var(stripslashes(trim($_POST['pass'])),FILTER_SANITIZE_STRING);
 $money = '0';
 
 
+
 // проверка на пустые поля данных
 if ($email=='' OR $pass=='' OR $login=='') {
     if ($email=='') {
@@ -37,7 +38,7 @@ if (strlen($email) > 30 OR strlen($pass) > 32 OR strlen($login) > 32){
        exit();
     }
 
-    if (strlen($pass) > 32) {
+    if (strlen($pass) > 100) {
         echo "<font color='red'>Пароль слишком длинный !</font><br/>";
         exit();
     }
@@ -53,8 +54,7 @@ if (strlen($email) > 30 OR strlen($pass) > 32 OR strlen($login) > 32){
 
 
 // создание Хэша
-$pass = md5($pass."fasf12c");
-
+$hash_pass = password_hash($pass, PASSWORD_DEFAULT);
 
 
 // Create connection -----------------------------------------
@@ -78,6 +78,16 @@ if(mysqli_num_rows($result)==0){
     die;
 }
 
+// проверка на уникальность login
+$sql = "SELECT login FROM users WHERE login = '$login'";
+$result = $conn->query($sql);
+if(mysqli_num_rows($result)==0){ 
+    echo "<br>"."Такого login(a) ещё нет в бд !"; 
+} else{ 
+    echo "<br>"."Такой login уже зарегистрирован !"."<br>"."Измените login !";
+    die;
+}
+
 
 
 // проверка на уникальность зарандомленного имени
@@ -97,7 +107,7 @@ $name = $randomName;
 
 
 // добавление записи в код
-$sql = "INSERT INTO `users` (`name`, `email`, `login`, `password`, `money`) VALUES ('$name', '$email', '$login', '$pass', '$money')";
+$sql = "INSERT INTO `users` (`name`, `email`, `login`, `password`, `money`) VALUES ('$name', '$email', '$login', '$hash_pass', '$money')";
 if ($conn->query($sql) === TRUE) {
     echo '<br>'.'Аккаунт добавлен в бд';
 } else {
