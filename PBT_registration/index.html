@@ -90,13 +90,12 @@
 
     <main class="registration__body">  
         <section class="registration__box">
-            <div class="registration__content_box">
+            <form action="/bd_scripts_php/signup.php" method="POST" class="registration__content_box">
                 <h1 class="registration__h1">Регистрация</h1>
-                <input placeholder="Почта" type="mail" id="registration__input">
-                <input placeholder="Пароль" type="password" id="registration__input">
-                <input placeholder="Повторите пароль" type="password" id="registration__input">
+                <input placeholder="Почта" type="text" name="email" id="registration__input">
+                <input placeholder="Логин" type="text" name="login" id="registration__input">
+                <input placeholder="Пароль" type="text" name="pass" id="registration__input">
                 <div class="registration__checkbox">
-                    
                     <label class="checkbox__label" for="checkbox_1">
                         <img src="./img/tick-icon.svg" alt="" id="checkbox__label_img">
                         <input class="checkbox__input" type="checkbox" id="checkbox_1" onchange="checkbox_tick()">
@@ -104,8 +103,8 @@
                         <span class="checkbox__label_text2">предложения по электронной почте.</span>
                     </label>
                 </div>
-                <button class="registration__btn">Зарегистрироваться</button>
-            </div>
+                <input type="submit" value="Зарегистрироваться" class="registration__btn">
+            </form>
         </section>
     </main>
 
