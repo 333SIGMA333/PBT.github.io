@@ -36,5 +36,5 @@ setcookie('user', $user['name'], time() + 3600 * 24 * 7, "/");
 
 $conn->close();
 
-header('Location: /PBT_autorization/index.html');
+header('Location: /PBT_autorization/index.php');
 ?>

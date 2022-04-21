@@ -1,3 +1,8 @@
+<?php
+    session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -104,6 +109,12 @@
                     </label>
                 </div>
                 <input type="submit" value="Зарегистрироваться" class="registration__btn">
+                    <?php 
+                        if(isset($_SESSION['good_message'])) {
+                            echo '<div class="registration__message">'.$_SESSION['good_message'].'</div>';
+                        }
+                        unset($_SESSION['good_message']);
+                    ?>
             </form>
         </section>
     </main>

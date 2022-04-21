@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 $permitted_chars = '0123456789abcdefghijklmnopqrstuvwxyz';
 $randomName = substr(str_shuffle($permitted_chars), 0, 10);
@@ -110,10 +111,11 @@ $name = $randomName;
 $sql = "INSERT INTO `users` (`name`, `email`, `login`, `password`, `money`) VALUES ('$name', '$email', '$login', '$hash_pass', '$money')";
 if ($conn->query($sql) === TRUE) {
     echo '<br>'.'Аккаунт добавлен в бд';
+    $_SESSION['good_message'] = 'Аккаунт добавлен';
 } else {
     echo "Ошибка: добавления данных в бд " . $sql . "<br>" . $conn->error;
 }
 
 $conn->close();
-header('Location: /PBT_autorization/index.html');
+header('Location: /PBT_registration/index.php');
 ?>

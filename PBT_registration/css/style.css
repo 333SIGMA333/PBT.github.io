@@ -751,6 +751,16 @@ hr{
     margin-top: 8px;
 }
 
+.registration__message{
+    border: 2px dashed #ffa908;
+    padding: 15px;
+    text-align: center;
+    margin-top: 10px;
+
+    font-size: 18px;
+    font-weight: 400;
+}
+
 .checkbox__label{
     color: #444;
     cursor: pointer;
@@ -1118,6 +1128,8 @@ hr{
     .registration__box{
         padding-top: 10px;
         padding-bottom: 0;
+        
+        height: 428px;
     }
 
     .checkbox__label_text1{
