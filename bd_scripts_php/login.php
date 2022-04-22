@@ -39,5 +39,5 @@ setcookie('user', $user['on'], time() + 3600 * 24 * 7, "/");
 
 $conn->close();
 
-header('Location: /PBT_profile_buyer/index.html');
+header('Location: /PBT_profile_buyer/index.php');
 ?>

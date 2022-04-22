@@ -21,7 +21,7 @@
                         <a href="/PBT_contacts/index.php" class="menu__link4 menu__link">Контакты</a>
                     </li>
                     <li class="menu__item5 menu__item">
-                        <a href="/PBT_ guarantee/index.php" class="menu__link5 menu__link">Гарантии</a>
+                        <a href="/PBT_guarantee/index.php" class="menu__link5 menu__link">Гарантии</a>
                     </li>
                     <li class="menu__item6 menu__item">
                         <a href="/PBT_how_to_buy/index.php" class="menu__link6 menu__link">Как купить</a>

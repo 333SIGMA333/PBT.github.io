@@ -54,5 +54,5 @@
 </html>
 
 
-<?php else:  header('Location: /PBT_profile_buyer/index.html');?>
+<?php else:  header('Location: /PBT_profile_buyer/index.php');?>
 <?php endif; ?>

@@ -899,8 +899,10 @@ hr{
     opacity: 0;
     visibility: hidden;
 
-    margin-top: 55px;
-    margin-left: -80px;
+    margin-top: 105px;
+    margin-left: -130px;
+    
+    z-index: 999;
 }
 
 .profile__left_remove-money-prompt{
@@ -1851,7 +1853,7 @@ label[for="email"]{
 
     .profile__left__remove_prompt{
         width: 260px;
-        margin-left: -37px;
+        margin-left: -70px;
     }
 
     .profile__right_content-box{
