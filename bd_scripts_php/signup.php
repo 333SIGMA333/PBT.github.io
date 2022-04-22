@@ -15,18 +15,19 @@ $money = '0';
 // проверка на пустые поля данных
 if ($email=='' OR $pass=='' OR $login=='') {
     if ($email=='') {
-       echo "<font color='red'>Заполните почту</font><br/>";
+        $_SESSION['bad_clear_email_message'] = 'Строка почты пустая!';
+        header('Location: /PBT_registration/index.php');
     }
 
     if ($pass=='') {
-        echo "<font color='red'>Заполните пароль</font><br/>";
+        $_SESSION['bad_clear_pass_message'] = 'Строка пароля пустая!';
+        header('Location: /PBT_registration/index.php');
     }
 
     if ($login=='') {
-        echo "<font color='red'>Заполните логин</font><br/>";
+        $_SESSION['bad_clear_login_message'] = 'Строка логина пустая!';
+        header('Location: /PBT_registration/index.php');
     }
-
-    echo "<br/><a href='javascript:self.history.back();'>Назад</a>";
     exit();
 }
 
@@ -35,20 +36,19 @@ if ($email=='' OR $pass=='' OR $login=='') {
 // проверка на длину
 if (strlen($email) > 30 OR strlen($pass) > 32 OR strlen($login) > 32){
     if (strlen($email) > 30) {
-       echo "<font color='red'>Почта слишком длинная !</font><br/>";
-       exit();
+       $_SESSION['bad_length_email_message'] = 'Слишком длинная почта!';
+        header('Location: /PBT_registration/index.php');
     }
 
     if (strlen($pass) > 100) {
-        echo "<font color='red'>Пароль слишком длинный !</font><br/>";
-        exit();
+        $_SESSION['bad_length_pass_message'] = 'Слишком длинный пароль!';
+        header('Location: /PBT_registration/index.php');
     }
 
     if (strlen($login) > 32) {
-        echo "<font color='red'>Логин слишком длинный</font><br/>";
-        exit();
+        $_SESSION['bad_length_login_message'] = 'Слишком длинный логин!';
+        header('Location: /PBT_registration/index.php');
     }
-    echo "<br/><a href='javascript:self.history.back();'>Назад</a>";
     exit();
 }
 
@@ -72,21 +72,20 @@ if ($conn->connect_error) {
 $sql = "SELECT email FROM users WHERE email = '$email'";
 $result = $conn->query($sql);
 if(mysqli_num_rows($result)==0){ 
-    echo "<br>"."Такого email ещё нет в бд !"; 
-
 } else{ 
-    echo "<br>"."Такая почта уже зарегистрирована !"."<br>"."Измените почту !";
-    die;
+    $_SESSION['bad_email_message'] = 'Такая почта уже есть!';
+    header('Location: /PBT_registration/index.php');
+    exit();
 }
 
 // проверка на уникальность login
 $sql = "SELECT login FROM users WHERE login = '$login'";
 $result = $conn->query($sql);
 if(mysqli_num_rows($result)==0){ 
-    echo "<br>"."Такого login(a) ещё нет в бд !"; 
 } else{ 
-    echo "<br>"."Такой login уже зарегистрирован !"."<br>"."Измените login !";
-    die;
+    $_SESSION['bad_login_message'] = 'Такой логин уже есть!';
+    header('Location: /PBT_registration/index.php');
+    exit();
 }
 
 
@@ -95,14 +94,12 @@ if(mysqli_num_rows($result)==0){
 $sql = "SELECT name FROM users WHERE name = '$randomName'";
 $result = $conn->query($sql);
 while(mysqli_num_rows($result)==1) {
-    echo "<br>"."Такое имя уже существует в бд !";
     $randomName = substr(str_shuffle($permitted_chars), 0, 10);
     $name = $randomName;
     
     $sql = "SELECT name FROM users WHERE name = '$randomName'";
     $result = $conn->query($sql);
 }
-echo "<br>"."Такого имени ещё нет в бд !"; 
 $name = $randomName;
 
 
@@ -110,10 +107,7 @@ $name = $randomName;
 // добавление записи в код
 $sql = "INSERT INTO `users` (`name`, `email`, `login`, `password`, `money`) VALUES ('$name', '$email', '$login', '$hash_pass', '$money')";
 if ($conn->query($sql) === TRUE) {
-    echo '<br>'.'Аккаунт добавлен в бд';
     $_SESSION['good_message'] = 'Аккаунт добавлен';
-} else {
-    echo "Ошибка: добавления данных в бд " . $sql . "<br>" . $conn->error;
 }
 
 $conn->close();

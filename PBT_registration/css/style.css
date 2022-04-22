@@ -1126,10 +1126,10 @@ hr{
     }
 
     .registration__box{
+        height: 440px;
+
         padding-top: 10px;
         padding-bottom: 0;
-        
-        height: 428px;
     }
 
     .checkbox__label_text1{

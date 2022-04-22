@@ -110,6 +110,74 @@
                 </div>
                 <input type="submit" value="Зарегистрироваться" class="registration__btn">
                     <?php 
+                        //пустые поля вылезает ошибка
+
+                        if(isset($_SESSION['bad_clear_email_message'])) {
+                            echo '<div class="registration__message">'.$_SESSION['bad_clear_email_message'].'</div>';
+                            echo '<style>.registration__message{border: 2px dashed red;}</style>';
+                            echo '<style>.registration__box{height: 610px;}</style>';
+                        }
+                        unset($_SESSION['bad_clear_email_message']);
+
+                        if(isset($_SESSION['bad_clear_pass_message'])) {
+                            echo '<div class="registration__message">'.$_SESSION['bad_clear_pass_message'].'</div>';
+                            echo '<style>.registration__message{border: 2px dashed red;}</style>';
+                            echo '<style>.registration__box{height: 610px;}</style>';
+                        }
+                        unset($_SESSION['bad_clear_pass_message']);
+
+                        if(isset($_SESSION['bad_clear_login_message'])) {
+                            echo '<div class="registration__message">'.$_SESSION['bad_clear_login_message'].'</div>';
+                            echo '<style>.registration__message{border: 2px dashed red;}</style>';
+                            echo '<style>.registration__box{height: 610px;}</style>';
+                        }
+                        unset($_SESSION['bad_clear_login_message']);
+
+
+                        //длинные строки вылезает ошибка
+
+
+                        if(isset($_SESSION['bad_length_email_message'])) {
+                            echo '<div class="registration__message">'.$_SESSION['bad_length_email_message'].'</div>';
+                            echo '<style>.registration__message{border: 2px dashed red;}</style>';
+                            echo '<style>.registration__box{height: 550px;}</style>';
+                        }
+                        unset($_SESSION['bad_length_email_message']);                        
+
+                        if(isset($_SESSION['bad_length_pass_message'])) {
+                            echo '<div class="registration__message">'.$_SESSION['bad_length_pass_message'].'</div>';
+                            echo '<style>.registration__message{border: 2px dashed red;}</style>';
+                            echo '<style>.registration__box{height: 550px;}</style>';
+                        }
+                        unset($_SESSION['bad_length_pass_message']);
+
+                        if(isset($_SESSION['bad_length_login_message'])) {
+                            echo '<div class="registration__message">'.$_SESSION['bad_length_login_message'].'</div>';
+                            echo '<style>.registration__message{border: 2px dashed red;}</style>';
+                            echo '<style>.registration__box{height: 550px;}</style>';
+                        }
+                        unset($_SESSION['bad_length_login_message']);
+
+
+                        //похожая почта - логин вылезает ошибка
+                        
+
+                        if(isset($_SESSION['bad_email_message'])) {
+                            echo '<div class="registration__message">'.$_SESSION['bad_email_message'].'</div>';
+                            echo '<style>.registration__message{border: 2px dashed red;}</style>';
+                        }
+                        unset($_SESSION['bad_email_message']);
+
+                        if(isset($_SESSION['bad_login_message'])) {
+                            echo '<style>.registration__message{border: 2px dashed red;}</style>';
+                            echo '<div class="registration__message">'.$_SESSION['bad_login_message'].'</div>';
+                        }
+                        unset($_SESSION['bad_login_message']);
+
+
+                        //добавлен аккаунт
+
+
                         if(isset($_SESSION['good_message'])) {
                             echo '<div class="registration__message">'.$_SESSION['good_message'].'</div>';
                         }
