@@ -12,81 +12,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <!--подключил файлы-->
     <link rel="stylesheet" href="./css/style.css">
+<?php if(isset($_COOKIE['user'])): ?>
+    <link rel="stylesheet" href="/bd_scripts_php/profile.css">
+<?php endif; ?>
 </head>
 
 <body>
 
-    <header class="header">
-
-        <container class="wrap">
-            <div class="logo">
-                <img src="/PBT_shop_page/img/logo.png" alt="" class="logo__icon">
-                <div class="logo__text">PROBOOSTEAM</div>
-            </div>
-
-            <nav class="navigation">
-                <ul class="menu__list">
-                    <li class="menu__item1 menu__item">
-                        <a href="/PBT_shop_page/index.html" class="menu__link1 menu__link">Магазин</a>
-                    </li>
-                    <li class="menu__item2 menu__item">
-                        <a href="/PBT_about_us/index.html" class="menu__link2 menu__link">О нас</a>
-                    </li>
-                    <li class="menu__item3 menu__item">
-                        <a href="/PBT_reviews/index.html" class="menu__link3 menu__link">Отзывы</a>
-                    </li>
-                    <li class="menu__item4 menu__item">
-                        <a href="/PBT_contacts/index.html" class="menu__link4 menu__link">Контакты</a>
-                    </li>
-                    <li class="menu__item5 menu__item">
-                        <a href="/PBT_ guarantee/index.html" class="menu__link5 menu__link">Гарантии</a>
-                    </li>
-                    <li class="menu__item6 menu__item">
-                        <a href="/PBT_how_to_buy/index.html" class="menu__link6 menu__link">Как купить</a>
-                    </li>
-                </ul>
-            </nav>
-
-            <a href="/PBT_cart/index.html" class="cart">
-                <div class="cart__circle">
-                    <div class="cart__circle-text">1</div>
-                </div>
-                <img src="/PBT_shop_page/img/cart-icon.svg" alt="" class="cart__icon">
-                <div class="cart__text">Корзина</div>
-            </a>
-
-            <a href="#" class="language">
-                <img src="/PBT_shop_page/img/ru.jpg" alt="" class="language__menu_img-ru">
-                <div class="language__text">Язык</div>
-            </a>
-
-            <div class="cabinet">
-                <a href="#" class="cabinet__link" id="cabinet__link">
-                    <div class="cabinet__text" id="cabinet__text">Личный кабинет</div>
-                    <div class="cabinet__triangl"></div>
-                </a>
-            </div>
-        </container>
-        <!-- выпадающее меню -->
-        <ul id="header__cabinet_dropdown-menu">
-            <li>
-                <a href="/PBT_autorization/index.html" class="header__cabinet_enter">Войти</a>
-            </li>
-            <li>
-                <a href="/PBT_registration/index.html" class="header__cabinet_registrartion">Регистрация</a>
-            </li>
-            <li>
-                <a href="#" class="header__cabinet_language">
-                    <div class="language__cabinet_text">Язык</div>
-                    <img src="/PBT_shop_page/img/ru.jpg" alt="" class="language__cabinet_img-ru">
-                </a>
-            </li>
-        </ul>
-
-        <!-- палочка -->
-        <hr class="header__line">
-
-    </header>
+<?php 
+    if(isset($_COOKIE['user'])){
+        include '../bd_scripts_php/profile.php';
+    }
+    else{
+        include '../bd_scripts_php/profileOff.php';
+    }
+?>
 
     <article class="about__nav">
         <div class="about__nav_box">
@@ -109,14 +49,14 @@
                 <h1 class="about__history_h1">ИСТОРИЯ</h1>
             </a>
             <div class="about__history_text">
-                Наша команда <a href="/PBT_about_us/index.html" class="color__text_green">PROBOOSTEAM</a>  уже долгое время существует на рынке РМТ услуг. <br>
+                Наша команда <a href="/PBT_about_us/index.php" class="color__text_green">PROBOOSTEAM</a>  уже долгое время существует на рынке РМТ услуг. <br>
                 Наша история начинается с оказания услуг по прокачке и продаже голды в 2018 году. <br>
                 В 2019 году у нас настолько сильно увеличился объём продаж, что было принято решение создать сильную команду, которая бы справлялась с существующим объёмом работ. <br>
                 Группы людей, которые занимались индивидуальным предоставлением услуг объединились в большую и дружную команду, которая и по сей день предоставляет качественные услуги РМТ. <br>
                 Со временем поменялось большое количество людей, поменялась структура работы и теперь в нашей команде остались настоящие ветераны РМТ, а наша организация достигла высокой эффективности в выполнении нашем любимой работы. <br>
                 На данный момент мы продолжаем развиваться, набирать новых людей в команду,расширяться, поэтому наша команда будет ещё долгое время оставаться в тонусе и продолжать предоставлять качественные услуги на рынке РМТ услуг.
-                <p></p>Мы предоставляем <a href="/PBT_shop_page/index.html" class="color__text_green">большой спектр услуг</a>  в <span class="color__text_black">World of Warcraft: Burning Crusade, World of Warcraft: Shadowlands, World of Warcraft: SoM</span> . <br>
-                У нас вы можете <a href="/PBT_shop_page/index.html" class="color__text_green">заказать услуги</a>:  по прокачка уровней, профф, драйвингу, поднятию рейтинга, фарму хонора, одеванию в пререйд, РЛьству, продаже голды, закрытию ключей, закрытию рейдов, фарму шмота и многому другому. 
+                <p></p>Мы предоставляем <a href="/PBT_shop_page/index.php" class="color__text_green">большой спектр услуг</a>  в <span class="color__text_black">World of Warcraft: Burning Crusade, World of Warcraft: Shadowlands, World of Warcraft: SoM</span> . <br>
+                У нас вы можете <a href="/PBT_shop_page/index.php" class="color__text_green">заказать услуги</a>:  по прокачка уровней, профф, драйвингу, поднятию рейтинга, фарму хонора, одеванию в пререйд, РЛьству, продаже голды, закрытию ключей, закрытию рейдов, фарму шмота и многому другому. 
                 <p></p>У нас есть клиенты с которыми мы продолжаем работать с давних времён по сей день. Наша клиентская база с каждым днём расширяется и если вы бустер, то вы можете оставить на нашем сайте заявку в команду, работа для вас всегда найдётся.  
             </div>
         </div>

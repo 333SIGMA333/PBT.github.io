@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php 
+    session_start(); 
+?>
 
 <?php if(empty($_COOKIE['user'])): ?>
 
@@ -16,20 +18,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <!--подключил файлы-->
     <link rel="stylesheet" href="./css/style.css">
-<?php if(isset($_COOKIE['user'])): ?>
-    <link rel="stylesheet" href="/bd_scripts_php/profile.css">
-<?php endif; ?>
 </head>
 
 <body>
 
 <?php 
-    if(isset($_COOKIE['user'])){
-        include '../bd_scripts_php/profile.php';
-    }
-    else{
-        include '../bd_scripts_php/profileOff.php';
-    }
+    include '../bd_scripts_php/profileOff.php';
 ?>
     
     <main class="registration__body">  
@@ -133,5 +127,4 @@
 
 
 <?php else:  header('Location: /PBT_profile_buyer/index.html');?>
-
 <?php endif; ?>

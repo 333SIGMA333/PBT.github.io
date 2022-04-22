@@ -12,81 +12,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <!--подключил файлы-->
     <link rel="stylesheet" href="./css/style.css">
+<?php if(isset($_COOKIE['user'])): ?>
+    <link rel="stylesheet" href="/bd_scripts_php/profile.css">
+<?php endif; ?>
 </head>
 
 <body>
 
-    <header class="header">
-
-        <container class="wrap">
-            <div class="logo">
-                <img src="/PBT_shop_page/img/logo.png" alt="" class="logo__icon">
-                <div class="logo__text">PROBOOSTEAM</div>
-            </div>
-
-            <nav class="navigation">
-                <ul class="menu__list">
-                    <li class="menu__item1 menu__item">
-                        <a href="/PBT_shop_page/index.html" class="menu__link1 menu__link">Магазин</a>
-                    </li>
-                    <li class="menu__item2 menu__item">
-                        <a href="/PBT_about_us/index.html" class="menu__link2 menu__link">О нас</a>
-                    </li>
-                    <li class="menu__item3 menu__item">
-                        <a href="/PBT_reviews/index.html" class="menu__link3 menu__link">Отзывы</a>
-                    </li>
-                    <li class="menu__item4 menu__item">
-                        <a href="/PBT_contacts/index.html" class="menu__link4 menu__link">Контакты</a>
-                    </li>
-                    <li class="menu__item5 menu__item">
-                        <a href="/PBT_ guarantee/index.html" class="menu__link5 menu__link">Гарантии</a>
-                    </li>
-                    <li class="menu__item6 menu__item">
-                        <a href="/PBT_how_to_buy/index.html" class="menu__link6 menu__link">Как купить</a>
-                    </li>
-                </ul>
-            </nav>
-
-            <a href="/PBT_cart/index.html" class="cart">
-                <div class="cart__circle">
-                    <div class="cart__circle-text">1</div>
-                </div>
-                <img src="/PBT_shop_page/img/cart-icon.svg" alt="" class="cart__icon">
-                <div class="cart__text">Корзина</div>
-            </a>
-
-            <a href="#" class="language">
-                <img src="/PBT_shop_page/img/ru.jpg" alt="" class="language__menu_img-ru">
-                <div class="language__text">Язык</div>
-            </a>
-
-            <div class="cabinet">
-                <a href="#" class="cabinet__link" id="cabinet__link">
-                    <div class="cabinet__text" id="cabinet__text">Личный кабинет</div>
-                    <div class="cabinet__triangl"></div>
-                </a>
-            </div>
-        </container>
-        <!-- выпадающее меню -->
-        <ul id="header__cabinet_dropdown-menu">
-            <li>
-                <a href="/PBT_autorization/index.html" class="header__cabinet_enter">Войти</a>
-            </li>
-            <li>
-                <a href="/PBT_registration/index.html" class="header__cabinet_registrartion">Регистрация</a>
-            </li>
-            <li>
-                <a href="#" class="header__cabinet_language">
-                    <div class="language__cabinet_text">Язык</div>
-                    <img src="/PBT_shop_page/img/ru.jpg" alt="" class="language__cabinet_img-ru">
-                </a>
-            </li>
-        </ul>
-
-        <!-- палочка -->
-        <hr class="header__line">
-
-    </header>
+<?php 
+    if(isset($_COOKIE['user'])){
+        include '../bd_scripts_php/profile.php';
+    }
+    else{
+        include '../bd_scripts_php/profileOff.php';
+    }
+?>
 
     <nav class="shop__navigation">
         <ul class="shop__menu">
@@ -96,8 +36,8 @@
             </li>
             <hr class="shop__menu-line shop__menu-line1">
             <li class="shop__menu-item">
-                <a href="/PBT_shop_page/index.html" class="shop__menu-item-link shop__menu-item-link2">Прокачка персонажа</a>
-                <a href="/PBT_shop_page/index.html" class="shop__menu-item-link-media-mini shop__menu-item-link2">Прокачка</a>
+                <a href="/PBT_shop_page/index.php" class="shop__menu-item-link shop__menu-item-link2">Прокачка персонажа</a>
+                <a href="/PBT_shop_page/index.php" class="shop__menu-item-link-media-mini shop__menu-item-link2">Прокачка</a>
             </li>
             <hr class="shop__menu-line shop__menu-line2">
             <li class="shop__menu-item">
@@ -120,7 +60,7 @@
 
     <section class="shop__cards">
         <article class="shop__card shop__card1">
-            <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card-link">
+            <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card-link">
                 <div class="shop__card_link-img-box">
                     <img src="/PBT_shop_page/img/card-icon.jpg" alt="" class="shop__card-link-img">
                 </div>
@@ -131,14 +71,14 @@
             <div class="shop__card-order-container">
                 <div class="shop__card-price">45 $</div>
                 <hr class="shop__card-line shop__card-line2">
-                <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card_order-button-link">
+                <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card_order-button-link">
                     <div class="shop__card-order-button">Заказать</div>
                 </a>
             </div>
         </article>
 
         <article class="shop__card shop__card2">
-            <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card-link">
+            <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card-link">
                 <div class="shop__card-link-img">
                     <img src="/PBT_shop_page/img/card-icon.jpg" alt="" class="shop__card-link-img"">
                 </div>
@@ -149,14 +89,14 @@
             <div class="shop__card-order-container">
                 <div class="shop__card-price">45 $</div>
                 <hr class="shop__card-line shop__card-line2">
-                <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card_order-button-link">
+                <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card_order-button-link">
                     <div class="shop__card-order-button">Заказать</div>
                 </a>
             </div>
         </article>
 
         <article class="shop__card shop__card3">
-            <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card-link">
+            <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card-link">
                 <div class="shop__card-link-img">
                     <img src="/PBT_shop_page/img/card-icon.jpg" alt="" class="shop__card-link-img"">
                 </div>
@@ -167,14 +107,14 @@
             <div class="shop__card-order-container">
                 <div class="shop__card-price">45 $</div>
                 <hr class="shop__card-line shop__card-line2">
-                <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card_order-button-link">
+                <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card_order-button-link">
                     <div class="shop__card-order-button">Заказать</div>
                 </a>
             </div>
         </article>
 
         <article class="shop__card shop__card4">
-            <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card-link">
+            <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card-link">
                 <div class="shop__card-link-img">
                     <img src="/PBT_shop_page/img/card-icon.jpg" alt="" class="shop__card-link-img"">
                 </div>
@@ -185,14 +125,14 @@
             <div class="shop__card-order-container">
                 <div class="shop__card-price">45 $</div>
                 <hr class="shop__card-line shop__card-line2">
-                <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card_order-button-link">
+                <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card_order-button-link">
                     <div class="shop__card-order-button">Заказать</div>
                 </a>
             </div>
         </article>
 
         <article class="shop__card shop__card5">
-            <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card-link">
+            <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card-link">
                 <div class="shop__card-link-img">
                     <img src="/PBT_shop_page/img/card-icon.jpg" alt="" class="shop__card-link-img"">
                 </div>
@@ -203,14 +143,14 @@
             <div class="shop__card-order-container">
                 <div class="shop__card-price">45 $</div>
                 <hr class="shop__card-line shop__card-line2">
-                <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card_order-button-link">
+                <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card_order-button-link">
                     <div class="shop__card-order-button">Заказать</div>
                 </a>
             </div>
         </article>
 
         <article class="shop__card shop__card6">
-            <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card-link">
+            <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card-link">
                 <div class="shop__card-link-img">
                     <img src="/PBT_shop_page/img/card-icon.jpg" alt="" class="shop__card-link-img"">
                 </div>
@@ -221,14 +161,14 @@
             <div class="shop__card-order-container">
                 <div class="shop__card-price">45 $</div>
                 <hr class="shop__card-line shop__card-line2">
-                <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card_order-button-link">
+                <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card_order-button-link">
                     <div class="shop__card-order-button">Заказать</div>
                 </a>
             </div>
         </article>
 
         <article class="shop__card shop__card7">
-            <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card-link">
+            <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card-link">
                 <div class="shop__card-link-img">
                     <img src="/PBT_shop_page/img/card-icon.jpg" alt="" class="shop__card-link-img"">
                 </div>
@@ -239,14 +179,14 @@
             <div class="shop__card-order-container">
                 <div class="shop__card-price">45 $</div>
                 <hr class="shop__card-line shop__card-line2">
-                <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card_order-button-link">
+                <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card_order-button-link">
                     <div class="shop__card-order-button">Заказать</div>
                 </a>
             </div>
         </article>
 
         <article class="shop__card shop__card8">
-            <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card-link">
+            <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card-link">
                 <div class="shop__card-link-img">
                     <img src="/PBT_shop_page/img/card-icon.jpg" alt="" class="shop__card-link-img"">
                 </div>
@@ -257,14 +197,14 @@
             <div class="shop__card-order-container">
                 <div class="shop__card-price">45 $</div>
                 <hr class="shop__card-line shop__card-line2">
-                <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card_order-button-link">
+                <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card_order-button-link">
                     <div class="shop__card-order-button">Заказать</div>
                 </a>
             </div>
         </article>
 
         <article class="shop__card shop__card9">
-            <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card-link">
+            <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card-link">
                 <div class="shop__card-link-img">
                     <img src="/PBT_shop_page/img/card-icon.jpg" alt="" class="shop__card-link-img"">
                 </div>
@@ -275,14 +215,14 @@
             <div class="shop__card-order-container">
                 <div class="shop__card-price">45 $</div>
                 <hr class="shop__card-line shop__card-line2">
-                <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card_order-button-link">
+                <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card_order-button-link">
                     <div class="shop__card-order-button">Заказать</div>
                 </a>
             </div>
         </article>
 
         <article class="shop__card shop__card10">
-            <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card-link">
+            <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card-link">
                 <div class="shop__card-link-img">
                     <img src="/PBT_shop_page/img/card-icon.jpg" alt="" class="shop__card-link-img"">
                 </div>
@@ -293,13 +233,13 @@
             <div class="shop__card-order-container">
                 <div class="shop__card-price">45 $</div>
                 <hr class="shop__card-line shop__card-line2">
-                <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card_order-button-link">
+                <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card_order-button-link">
                     <div class="shop__card-order-button">Заказать</div>
                 </a>
             </div>
         </article>
         <article class="shop__card shop__card11">
-            <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card-link">
+            <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card-link">
                 <div class="shop__card-link-img">
                     <img src="/PBT_shop_page/img/card-icon.jpg" alt="" class="shop__card-link-img"">
                 </div>
@@ -310,13 +250,13 @@
             <div class="shop__card-order-container">
                 <div class="shop__card-price">45 $</div>
                 <hr class="shop__card-line shop__card-line2">
-                <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card_order-button-link">
+                <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card_order-button-link">
                     <div class="shop__card-order-button">Заказать</div>
                 </a>
             </div>
         </article>
         <article class="shop__card shop__card12">
-            <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card-link">
+            <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card-link">
                 <div class="shop__card-link-img">
                     <img src="/PBT_shop_page/img/card-icon.jpg" alt="" class="shop__card-link-img"">
                 </div>
@@ -327,13 +267,13 @@
             <div class="shop__card-order-container">
                 <div class="shop__card-price">45 $</div>
                 <hr class="shop__card-line shop__card-line2">
-                <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card_order-button-link">
+                <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card_order-button-link">
                     <div class="shop__card-order-button">Заказать</div>
                 </a>
             </div>
         </article>
         <article class="shop__card shop__card13">
-            <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card-link">
+            <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card-link">
                 <div class="shop__card-link-img">
                     <img src="/PBT_shop_page/img/card-icon.jpg" alt="" class="shop__card-link-img"">
                 </div>
@@ -344,13 +284,13 @@
             <div class="shop__card-order-container">
                 <div class="shop__card-price">45 $</div>
                 <hr class="shop__card-line shop__card-line2">
-                <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card_order-button-link">
+                <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card_order-button-link">
                     <div class="shop__card-order-button">Заказать</div>
                 </a>
             </div>
         </article>
         <article class="shop__card shop__card14">
-            <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card-link">
+            <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card-link">
                 <div class="shop__card-link-img">
                     <img src="/PBT_shop_page/img/card-icon.jpg" alt="" class="shop__card-link-img"">
                 </div>
@@ -361,13 +301,13 @@
             <div class="shop__card-order-container">
                 <div class="shop__card-price">45 $</div>
                 <hr class="shop__card-line shop__card-line2">
-                <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card_order-button-link">
+                <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card_order-button-link">
                     <div class="shop__card-order-button">Заказать</div>
                 </a>
             </div>
         </article>
         <article class="shop__card shop__card15">
-            <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card-link">
+            <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card-link">
                 <div class="shop__card-link-img">
                     <img src="/PBT_shop_page/img/card-icon.jpg" alt="" class="shop__card-link-img"">
                 </div>
@@ -378,13 +318,13 @@
             <div class="shop__card-order-container">
                 <div class="shop__card-price">45 $</div>
                 <hr class="shop__card-line shop__card-line2">
-                <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card_order-button-link">
+                <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card_order-button-link">
                     <div class="shop__card-order-button">Заказать</div>
                 </a>
             </div>
         </article>
         <article class="shop__card shop__card16">
-            <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card-link">
+            <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card-link">
                 <div class="shop__card-link-img">
                     <img src="/PBT_shop_page/img/card-icon.jpg" alt="" class="shop__card-link-img"">
                 </div>
@@ -395,13 +335,13 @@
             <div class="shop__card-order-container">
                 <div class="shop__card-price">45 $</div>
                 <hr class="shop__card-line shop__card-line2">
-                <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card_order-button-link">
+                <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card_order-button-link">
                     <div class="shop__card-order-button">Заказать</div>
                 </a>
             </div>
         </article>
         <article class="shop__card shop__card16">
-            <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card-link">
+            <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card-link">
                 <div class="shop__card-link-img">
                     <img src="/PBT_shop_page/img/card-icon.jpg" alt="" class="shop__card-link-img"">
                 </div>
@@ -412,13 +352,13 @@
             <div class="shop__card-order-container">
                 <div class="shop__card-price">45 $</div>
                 <hr class="shop__card-line shop__card-line2">
-                <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card_order-button-link">
+                <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card_order-button-link">
                     <div class="shop__card-order-button">Заказать</div>
                 </a>
             </div>
         </article>
         <article class="shop__card shop__card16">
-            <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card-link">
+            <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card-link">
                 <div class="shop__card-link-img">
                     <img src="/PBT_shop_page/img/card-icon.jpg" alt="" class="shop__card-link-img"">
                 </div>
@@ -429,13 +369,13 @@
             <div class="shop__card-order-container">
                 <div class="shop__card-price">45 $</div>
                 <hr class="shop__card-line shop__card-line2">
-                <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card_order-button-link">
+                <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card_order-button-link">
                     <div class="shop__card-order-button">Заказать</div>
                 </a>
             </div>
         </article>
         <article class="shop__card shop__card16">
-            <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card-link">
+            <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card-link">
                 <div class="shop__card-link-img">
                     <img src="/PBT_shop_page/img/card-icon.jpg" alt="" class="shop__card-link-img"">
                 </div>
@@ -446,13 +386,13 @@
             <div class="shop__card-order-container">
                 <div class="shop__card-price">45 $</div>
                 <hr class="shop__card-line shop__card-line2">
-                <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card_order-button-link">
+                <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card_order-button-link">
                     <div class="shop__card-order-button">Заказать</div>
                 </a>
             </div>
         </article>
         <article class="shop__card shop__card16">
-            <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card-link">
+            <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card-link">
                 <div class="shop__card-link-img">
                     <img src="/PBT_shop_page/img/card-icon.jpg" alt="" class="shop__card-link-img"">
                 </div>
@@ -463,13 +403,13 @@
             <div class="shop__card-order-container">
                 <div class="shop__card-price">45 $</div>
                 <hr class="shop__card-line shop__card-line2">
-                <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card_order-button-link">
+                <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card_order-button-link">
                     <div class="shop__card-order-button">Заказать</div>
                 </a>
             </div>
         </article>
         <article class="shop__card shop__card16">
-            <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card-link">
+            <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card-link">
                 <div class="shop__card-link-img">
                     <img src="/PBT_shop_page/img/card-icon.jpg" alt="" class="shop__card-link-img"">
                 </div>
@@ -480,13 +420,13 @@
             <div class="shop__card-order-container">
                 <div class="shop__card-price">45 $</div>
                 <hr class="shop__card-line shop__card-line2">
-                <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card_order-button-link">
+                <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card_order-button-link">
                     <div class="shop__card-order-button">Заказать</div>
                 </a>
             </div>
         </article>
         <article class="shop__card shop__card16">
-            <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card-link">
+            <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card-link">
                 <div class="shop__card-link-img">
                     <img src="/PBT_shop_page/img/card-icon.jpg" alt="" class="shop__card-link-img"">
                 </div>
@@ -497,13 +437,13 @@
             <div class="shop__card-order-container">
                 <div class="shop__card-price">45 $</div>
                 <hr class="shop__card-line shop__card-line2">
-                <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card_order-button-link">
+                <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card_order-button-link">
                     <div class="shop__card-order-button">Заказать</div>
                 </a>
             </div>
         </article>
         <article class="shop__card shop__card16">
-            <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card-link">
+            <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card-link">
                 <div class="shop__card-link-img">
                     <img src="/PBT_shop_page/img/card-icon.jpg" alt="" class="shop__card-link-img"">
                 </div>
@@ -514,13 +454,13 @@
             <div class="shop__card-order-container">
                 <div class="shop__card-price">45 $</div>
                 <hr class="shop__card-line shop__card-line2">
-                <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card_order-button-link">
+                <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card_order-button-link">
                     <div class="shop__card-order-button">Заказать</div>
                 </a>
             </div>
         </article>
         <article class="shop__card shop__card16">
-            <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card-link">
+            <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card-link">
                 <div class="shop__card-link-img">
                     <img src="/PBT_shop_page/img/card-icon.jpg" alt="" class="shop__card-link-img"">
                 </div>
@@ -531,7 +471,7 @@
             <div class="shop__card-order-container">
                 <div class="shop__card-price">45 $</div>
                 <hr class="shop__card-line shop__card-line2">
-                <a href="/PBT_shop_page/card_page_leveling_60-70/index.html" class="shop__card_order-button-link">
+                <a href="/PBT_shop_page/card_page_leveling_60-70/index.php" class="shop__card_order-button-link">
                     <div class="shop__card-order-button">Заказать</div>
                 </a>
             </div>

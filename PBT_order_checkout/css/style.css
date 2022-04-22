@@ -1268,6 +1268,14 @@ input[type=text] {
     .profile__booster_list-order_inf-box{
         margin-left: 5px;
     }
+
+    .profile__booster_list-checkout-pay-box{
+        padding-left: 55px;
+    }
+
+    .profile__booster_list-checkout-pay-btn{
+        margin-left: 55px;
+    }
 }
 
 @media (max-width: 659px) {

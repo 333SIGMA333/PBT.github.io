@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,80 +12,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <!--подключил файлы-->
     <link rel="stylesheet" href="/PBT_shop_page/card_page_leveling_60-70/css/style.css">
+<?php if(isset($_COOKIE['user'])): ?>
+    <link rel="stylesheet" href="/bd_scripts_php/profile.css">
+<?php endif; ?>
 </head>
 <body>
 
-    <header class="header">
-
-        <container class="wrap">
-            <div class="logo">
-                <img src="/PBT_shop_page/img/logo.png" alt="" class="logo__icon">
-                <div class="logo__text">PROBOOSTEAM</div>
-            </div>
-
-            <nav class="navigation">
-                <ul class="menu__list">
-                    <li class="menu__item1 menu__item">
-                        <a href="/PBT_shop_page/index.html" class="menu__link1 menu__link">Магазин</a>
-                    </li>
-                    <li class="menu__item2 menu__item">
-                        <a href="/PBT_about_us/index.html" class="menu__link2 menu__link">О нас</a>
-                    </li>
-                    <li class="menu__item3 menu__item">
-                        <a href="/PBT_reviews/index.html" class="menu__link3 menu__link">Отзывы</a>
-                    </li>
-                    <li class="menu__item4 menu__item">
-                        <a href="/PBT_contacts/index.html" class="menu__link4 menu__link">Контакты</a>
-                    </li>
-                    <li class="menu__item5 menu__item">
-                        <a href="/PBT_ guarantee/index.html" class="menu__link5 menu__link">Гарантии</a>
-                    </li>
-                    <li class="menu__item6 menu__item">
-                        <a href="/PBT_how_to_buy/index.html" class="menu__link6 menu__link">Как купить</a>
-                    </li>
-                </ul>
-            </nav>
-
-            <a href="/PBT_cart/index.html" class="cart">
-                <div class="cart__circle">
-                    <div class="cart__circle-text">1</div>
-                </div>
-                <img src="/PBT_shop_page/img/cart-icon.svg" alt="" class="cart__icon">
-                <div class="cart__text">Корзина</div>
-            </a>
-
-            <a href="#" class="language">
-                <img src="/PBT_shop_page/img/ru.jpg" alt="" class="language__menu_img-ru">
-                <div class="language__text">Язык</div>
-            </a>
-
-            <div class="cabinet">
-                <a href="#" class="cabinet__link" id="cabinet__link">
-                    <div class="cabinet__text" id="cabinet__text">Личный кабинет</div>
-                    <div class="cabinet__triangl"></div>
-                </a>
-            </div>
-        </container>
-        <!-- выпадающее меню -->
-        <ul id="header__cabinet_dropdown-menu">
-            <li>
-                <a href="/PBT_autorization/index.html" class="header__cabinet_enter">Войти</a>
-            </li>
-            <li>
-                <a href="/PBT_registration/index.html" class="header__cabinet_registrartion">Регистрация</a>
-            </li>
-            <li>
-                <a href="#" class="header__cabinet_language">
-                    <div class="language__cabinet_text">Язык</div>
-                    <img src="/PBT_shop_page/img/ru.jpg" alt="" class="language__cabinet_img-ru">
-                </a>
-            </li>
-        </ul>
-
-        <!-- палочка -->
-        <hr class="header__line">
-
-    </header>
+<?php 
+    if(isset($_COOKIE['user'])){
+        include '../../bd_scripts_php/profile.php';
+    }
+    else{
+        include '../../bd_scripts_php/profileOff.php';
+    }
+?>
 
     <nav class="shop__navigation">
         <ul class="shop__menu">
@@ -94,8 +35,8 @@
             </li>
             <hr class="shop__menu-line shop__menu-line1">
             <li class="shop__menu-item">
-                <a href="/PBT_shop_page/index.html" class="shop__menu-item-link shop__menu-item-link2">Прокачка персонажа</a>
-                <a href="/PBT_shop_page/index.html" class="shop__menu-item-link-media-mini shop__menu-item-link2">Прокачка</a>
+                <a href="/PBT_shop_page/index.php" class="shop__menu-item-link shop__menu-item-link2">Прокачка персонажа</a>
+                <a href="/PBT_shop_page/index.php" class="shop__menu-item-link-media-mini shop__menu-item-link2">Прокачка</a>
             </li>
             <hr class="shop__menu-line shop__menu-line2">
             <li class="shop__menu-item">
@@ -119,7 +60,7 @@
     <section class="card__wrap_60-70leveling">
         <article class="shop__card">
             <div class="shop__card_img-box">
-                    <img src="/PBT_shop_page/card_page_leveling_60-70/img/card-icon.png" alt="" class="shop__card-img">
+                <img src="/PBT_shop_page/card_page_leveling_60-70/img/card-icon.png" alt="" class="shop__card-img">
             </div>
             <div class="shop__card_body-box">
                 <div class="shop__card_form-field">
@@ -346,7 +287,7 @@
                 </div>
             </div>
             <div class="shop__desc_button_box">
-                <a href="/PBT_order_checkout/index.html" class="shop__desc_button_link">
+                <a href="/PBT_order_checkout/index.php" class="shop__desc_button_link">
                     <button class="shop__desc_button">
                         <img src="/PBT_shop_page/card_page_leveling_60-70/img/Transfer_long_left.svg" alt="" class="shop__desc_button-img">
                         <div class="shop__desc_button-text">Купить в 1 клик</div>
