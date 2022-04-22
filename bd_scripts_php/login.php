@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 
 $email = filter_var(stripslashes(trim($_POST['email'])),FILTER_SANITIZE_STRING);
 $login = filter_var(stripslashes(trim($_POST['login'])),FILTER_SANITIZE_STRING);
@@ -22,16 +24,17 @@ if ($conn->connect_error) {
 $result = ($conn->query("SELECT `password` FROM `users` WHERE `login` = '$login' AND `email` = '$email'"));
 $hash_pass = $result->fetch_assoc(); // присвоен хэш
 if(password_verify($pass, $hash_pass['password']) == true) {
-    echo '<br>'.'Такой аккаунт существует в бд ';
+    $user = ['on' => 1];
 } 
 else {
-    echo '<br>'.'Такой аккаунт не существует в бд ';
+    $_SESSION['bad_autorization'] = 1;
+    header('Location: /PBT_autorization/index.php');
     exit();
 }
 
 
 // куки аккаунта на 7 дней
-setcookie('user', $user['name'], time() + 3600 * 24 * 7, "/");
+setcookie('user', $user['on'], time() + 3600 * 24 * 7, "/");
 
 
 $conn->close();

@@ -629,7 +629,7 @@ hr{
     border-top: 7px solid #000;
 }
 
-.header__line {
+.header__line{
     margin-top: 10px;
     margin-bottom: 0px;
     max-width: 1375px;
@@ -1429,8 +1429,9 @@ label[for="email"]{
 
     .profile__right_content-box {
         width: 425px;
-        }
+    }
 }
+
 @media (max-width: 824px) {
     .navigation{
         margin-left: 10px;

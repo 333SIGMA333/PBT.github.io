@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -96,6 +100,13 @@
                 <input placeholder="Почта" type="text" name="email" id="autorization__input">
                 <input placeholder="Логин" type="text" name="login" id="autorization__input">
                 <input placeholder="Пароль" type="text" name="pass" id="autorization__input">
+                <?php
+                    // подсветка инпутов красным в случае неправильного ввода
+                    if(isset($_SESSION['bad_autorization'])) {
+                        echo '<style>#autorization__input{border: 2px solid rgb(255, 0, 0);}</style>';
+                    }
+                    unset($_SESSION['bad_autorization']);
+                ?>
                 <button type="submit" class="autorization__btn1">Войти</button>
             </form>
             <a href="/PBT_registration/index.php"><button class="autorization__btn2">Зарегистрироваться</button></a>
