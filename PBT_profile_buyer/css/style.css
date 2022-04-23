@@ -456,7 +456,7 @@ hr{
 .header{
     position: relative;
 
-    width: 1380px;
+    width: 1320px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -654,6 +654,7 @@ hr{
     right: 0;
 
     margin-right: 4px;
+    margin-top: 12px;
 
     z-index: 1;
 
@@ -974,6 +975,9 @@ hr{
     margin-top: 25px;
     margin-left: 30px;
     margin-right: auto;
+
+    width: 60px;
+    height: 72px;
 }
 
 #profile__right_avatar-upload{
@@ -1172,7 +1176,7 @@ label[for="email"]{
     font-size: 14px;
     line-height: 16px;
 
-    margin-top: 60px;
+    margin-top: 134px;
     margin-left: 36px;
 }
 
@@ -1200,7 +1204,7 @@ label[for="email"]{
 
 @media (max-width: 1400px) {
     .navigation{
-        margin-left: 65px;
+        margin-left: 115px;
     }
 
     .header{
@@ -1216,7 +1220,7 @@ label[for="email"]{
     }
 
     .cart{
-        margin-left: 45px;
+        margin-left: 55px;
     }
 
     #header__cabinet_dropdown-menu{
@@ -1388,7 +1392,7 @@ label[for="email"]{
 
     .profile__box{
         width: 650px;
-        height: 910px;
+        height: 780px;
     }
 
     .profile__left_inf-box{
@@ -1400,10 +1404,10 @@ label[for="email"]{
     }
 
     .profile__left_content-box:before{
-        left: -167px;
-        top: 355px;
+        left: -102px;
+        top: 290px;
 
-        width: 908px;
+        width: 778px;
     }
 
     .profile__left_trans-box{
@@ -1475,7 +1479,7 @@ label[for="email"]{
 
     .profile__box{
         width: 423px;
-        height: 685px;
+        height: 555px;
 
         padding-top: 5px;
         padding-bottom: 5px;
@@ -1540,9 +1544,9 @@ label[for="email"]{
     }
 
     .profile__left_content-box:before{
-        top: 327px;
-        left: -141px;
-        width: 683px;
+        top: 261px;
+        left: -76px;
+        width: 553px;
     }
 
     .profile__left_trans_text{
@@ -1603,6 +1607,7 @@ label[for="email"]{
         margin-left: 4px;
         margin-top: 5px;
         height: 62px;
+        width: 52px;
     }
     
     #profile__right_avatar-upload{
@@ -1733,7 +1738,7 @@ label[for="email"]{
 
     .profile__box{
         width: 272px;
-        height: 1180px;
+        height: 990px;
 
         margin-top: 90px;
     }
@@ -1741,7 +1746,7 @@ label[for="email"]{
     .profile__right_content-box{
         position: absolute;
 
-        top: 650px;
+        top: 580px;
     }
 
     .profile__right_contacts_box{

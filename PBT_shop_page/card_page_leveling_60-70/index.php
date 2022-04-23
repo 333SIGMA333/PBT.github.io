@@ -20,7 +20,7 @@
 
 <?php 
     if(isset($_COOKIE['user'])){
-        include '../../bd_scripts_php/profile.php';
+        include '../../bd_scripts_php/profileCard.php';
     }
     else{
         include '../../bd_scripts_php/profileOff.php';

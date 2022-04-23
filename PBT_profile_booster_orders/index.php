@@ -2,7 +2,7 @@
     session_start(); 
 ?>
 
-<?php if(isset($_COOKIE['user'])): ?>
+<?php if(isset($_COOKIE['id']) AND isset($_COOKIE['booster'])): ?>
 
 <!DOCTYPE html>
 <html lang="ru">
@@ -18,6 +18,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <!--подключил файлы-->
     <link rel="stylesheet" href="./css/style.css">
+<?php if(isset($_COOKIE['user'])): ?>
+    <link rel="stylesheet" href="/bd_scripts_php/profile.css">
+<?php endif; ?>
 </head>
 
 <body>
@@ -30,11 +33,23 @@
         <section class="profile__box">
             <div class="profile__left_content-box">
                 <div class="profile__left_inf-box">
-                    <img src="/PBT_profile_buyer/img/profile-img.svg" alt="" class="profile__left_img">
+                    <img src="<?php 
+                            if(isset($_COOKIE['avatar'])){
+                                echo($_COOKIE['avatar']);
+                            }else{
+                                echo ("/PBT_profile_buyer/img/profile-img.svg");
+                                } 
+                            ?>" alt="" class="profile__left_img">
                     <div class="profile__left_text-box">
-                        <div class="profile__left_nick">ProBooster228</div>
+                        <div class="profile__left_nick"><?php 
+                            if(isset($_COOKIE['user'])){
+                                echo($_COOKIE['user']);
+                            }else{
+                                echo (" ");
+                                } 
+                            ?></div>
                         <div class="profile__left_money-box">
-                            <div class="profile__left_money">25$</div>
+                            <div class="profile__left_money"><?=$_COOKIE['money']?>$</div>
                             <div class="profile__left_money-content-box">
                                 <a href="#" class="profile__left_add-money-content-box">+ Пополнить</a>
                                 <div class="profile__left_remove-money-prompt" id="profile__left_remove-money-prompt">
@@ -73,7 +88,7 @@
                         <div class="profile__left_trans_counter">0</div>
                     </div>
                 </a>
-                <a href="#">
+                <a href="/bd_scripts_php/exit.php">
                     <div class="profile__left_trans-box profile__left_trans-box5">
                         <div class="profile__left_trans_text">Выйти</div>
                     </div>

@@ -1046,6 +1046,9 @@ hr{
     margin-top: 25px;
     margin-left: 30px;
     margin-right: auto;
+
+    width: 60px;
+    height: 72px;
 }
 
 #profile__right_avatar-upload{
@@ -1244,7 +1247,7 @@ label[for="email"]{
     font-size: 14px;
     line-height: 16px;
 
-    margin-top: 134px;
+    margin-top: 205px;
     margin-left: 36px;
 }
 
@@ -1500,7 +1503,7 @@ label[for="email"]{
     }
 
     .profile__right_btn{
-        margin-top: 64px;
+        margin-top: 134px;
     }
 
     .profile__right_nick-content-box{
@@ -1670,6 +1673,7 @@ label[for="email"]{
         margin-left: 4px;
         margin-top: 5px;
         height: 62px;
+        width: 52px;
     }
     
     #profile__right_avatar-upload{
@@ -1733,7 +1737,7 @@ label[for="email"]{
     }
 
     .profile__right_btn{
-        margin-top: 15px;
+        margin-top: 75px;
         margin-left: 12px;
 
         width: 170px;

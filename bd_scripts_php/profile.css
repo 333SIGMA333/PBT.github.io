@@ -1,5 +1,5 @@
 .header{
-    width: 1380px;
+    width: 1320px;
 }
 
 .header__line {
@@ -21,7 +21,8 @@
 #header__cabinet_dropdown-menu{
     width: 90px;
     height: 60px;
-    margin-right: 4px;
+    margin-right: 0px;
+    margin-top: 11px;
 }
 
 .cabinet__triangl{
@@ -136,7 +137,7 @@
 
 @media (max-width: 1400px) {
     .navigation{
-        margin-left: 65px;
+        margin-left: 100px;
     }
 
     .header{
@@ -152,7 +153,7 @@
     }
 
     .cart{
-        margin-left: 45px;
+        margin-left: 65px;
     }
 
     #header__cabinet_dropdown-menu{

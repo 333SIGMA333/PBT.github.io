@@ -2,7 +2,7 @@
     session_start(); 
 ?>
 
-<?php if(isset($_COOKIE['user'])): ?>
+<?php if(isset($_COOKIE['id']) AND isset($_COOKIE['booster'])): ?>
 
 <!DOCTYPE html>
 <html lang="ru">
@@ -18,6 +18,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <!--подключил файлы-->
     <link rel="stylesheet" href="./css/style.css">
+<?php if(isset($_COOKIE['user'])): ?>
+    <link rel="stylesheet" href="/bd_scripts_php/profile.css">
+<?php endif; ?>
 </head>
 
 <body>

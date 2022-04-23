@@ -47,7 +47,7 @@
                     <div class="cabinet__circle_img-box">
                         <img src="<?php 
                             if(isset($_COOKIE['avatar'])){
-                                echo($_COOKIE['avatar']);
+                                echo('../'.$_COOKIE['avatar']);
                             }else{
                                 echo ("/PBT_profile_buyer/img/profile-img.svg");
                                 } 

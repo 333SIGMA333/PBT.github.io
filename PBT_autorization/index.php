@@ -2,7 +2,7 @@
     session_start();
 ?>
 
-<?php if(empty($_COOKIE['user'])): ?>
+<?php if(empty($_COOKIE['id'])): ?>
 
 <!DOCTYPE html>
 <html lang="ru">
